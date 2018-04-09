@@ -1,0 +1,56 @@
+    <div class=" login">
+        <!-- BEGIN LOGO -->
+        <div class="logo">
+<!--             <a href="index.html"> -->
+            <h2 style="color: white;"><b>BPW</b></h2>
+<!--                 <img src="assets/pages/img/logo-big-white.png" style="height: 17px;" alt="" /> </a> -->
+        </div>
+        <!-- END LOGO -->
+        <!-- BEGIN LOGIN -->
+        <div class="content">
+            <!-- BEGIN LOGIN FORM -->
+            <ng-form ng-submit="vm.signin()" class="login-form" novalidate name="loginForm">
+                <div class="form-title">
+                    <span class="form-title">Welcome.</span>
+                    <span class="form-subtitle">Please login.</span>
+                </div>
+               <div class="alert alert-danger" ng-hide="vm.validFromServer">
+                    <button class="close" data-close="alert"></button>
+                    <span> Invalid mobile or password </span>
+                </div>
+                <div class="form-group">
+                    <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                    <label class="control-label visible-ie8 visible-ie9">Mobile</label>
+                    <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Mobile" name="mobile" ng-model="vm.mobile" ng-minlength="10" ng-maxlength="10" maxlength="10" required/> 
+               		<span style="color:red" ng-show="loginForm.mobile.$dirty && loginForm.mobile.$invalid">
+						<span ng-show="loginForm.mobile.$error.required">Mobile is required.</span>
+						<span ng-show="loginForm.mobile.$error.minlength">Mobile should be of 10 digits.</span>
+						<span ng-show="loginForm.mobile.$error.maxlength">Mobile should be of 10 digits.</span>
+					</span>
+               	</div>
+                <div class="form-group">
+                    <label class="control-label visible-ie8 visible-ie9">Password</label>
+                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"  name="password" ng-model="vm.password" required />
+                    <span style="color:red" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+						<span ng-show="loginForm.password.$error.required">Password is required.</span>
+					</span> 
+                </div>
+                <div class="form-actions">
+                    <button type="button" ng-click="vm.signin()" class="btn green-jungle btn-block uppercase">Login</button>
+                </div>
+                <div class="form-actions">
+                    <div class="pull-left">
+                        <label class="rememberme mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="remember" ng-model="vm.rememberMe" /> Remember me
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="pull-right forget-password-block">
+                        <a ui-sref="auth.forgot" href="#" class="forget-password">Forgot Password?</a>
+                    </div>
+                </div>                
+            </ng-form>
+            <!-- END LOGIN FORM -->
+        </div>
+        <div class="copyright hide"> 2014 © Metronic. Admin Dashboard Template. </div>
+    </div>

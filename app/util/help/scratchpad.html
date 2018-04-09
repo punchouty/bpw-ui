@@ -1,0 +1,97 @@
+<style type="text/css">
+        .ace_editor  {
+          height : 500px;
+        }
+        canvas {
+             background-color: #f3f3f3;
+             -webkit-box-shadow: 3px 3px 3px 0 #e3e3e3;
+             -moz-box-shadow: 3px 3px 3px 0 #e3e3e3;
+             box-shadow: 3px 3px 3px 0 #e3e3e3;
+             border: 1px solid #c3c3c3;
+             height: 100px;
+             margin: 6px 0 0 6px;
+         }
+         .modal {
+          text-align: center;
+          padding: 5px;
+        }
+        .modal:before {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: -4px;
+          padding: 5px;
+        }
+        
+        .modal-dialog {
+          display: inline-block;
+          text-align: left;
+          vertical-align: middle;
+        }
+</style>
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+	<li><a ui-sref="dashboard">Home</a> <i class="fa fa-circle"></i></li>
+	<li class="active">Scratchpad</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN PAGE BASE CONTENT -->
+<ng-form name="code" class="form-body light bordered">
+	<div class="row">
+		<div class="col-md-4">
+        	<div class="form-group">
+				<label>URL</label>
+		        <div class="input-icon">
+		            <i class="fa fa-link font-green"></i>
+		            <input type="text" class="form-control" placeholder="URL without base" name="url" ng-model="vm.url"> 
+		        </div>
+		    </div>
+        </div>
+        <div class="col-md-4">
+        	<div class="form-group">
+        		<label>Method</label>
+                <div class="mt-radio-list">
+                    <label class="mt-radio"> GET
+                        <input type="radio" value="get" ng-model="vm.method" />
+                        <span></span>
+                    </label>
+                    <label class="mt-radio"> POST
+                        <input type="radio" value="post" ng-model="vm.method" />
+                        <span></span>
+                    </label>
+                    <label class="mt-radio"> PUT
+                        <input type="radio" value="put" ng-model="vm.method" />
+                        <span></span>
+                    </label>
+                    <label class="mt-radio"> PATCH
+                        <input type="radio" value="patch" ng-model="vm.method" />
+                        <span></span>
+                    </label>
+                </div>
+	        </div>
+        </div>
+        <div class="col-md-4">
+        	<div class="form-actions">
+            	<button ng-click="vm.execute()" class="btn blue">Execute</button>
+        	</div>
+        </div>
+        
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<section>
+			  <div ui-ace='{mode: "javascript"}' ng-model="vm.input" ></div>
+			</section>
+		</div>
+		<div class="col-md-6">
+			<section>
+			  <div ui-ace='{mode: "javascript"}' ng-model="vm.output" ></div>
+			</section>
+		</div>
+	</div>
+	<div class="row">
+		
+	</div>
+</ng-form>
