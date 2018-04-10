@@ -1,0 +1,105 @@
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <!-- <li>
+        <a ui-sref="dashboard">Blank Page</a>
+        <i class="fa fa-circle"></i>
+    </li> -->
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row" >
+    <div class="col-md-12">
+        <!-- BEGIN: ACCORDION DEMO -->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-green-sharp">
+                    <i class="icon-settings font-green-sharp"></i>
+                    <span class="caption-subject bold uppercase">{{vm.reseller.name}}</span>
+                    <span class="caption-helper hide"></span>
+                </div>
+                <div class="actions">
+                   <!--  <a class="btn btn-circle  green" href="#">
+                        <i class="fa fa-plus"></i> Add
+                    </a> -->
+                   <!--  <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                        <i class="icon-wrench"></i>
+                    </a> -->
+                     <a class="btn red btn-outline btn-circle" href="#" ng-click="vm.goBack()">  <i class="fa  fa-mail-reply"></i> Back </a>
+                </div>
+            </div>
+            <div class="portlet-body"> 
+
+
+                <uib-tabset active="active">
+                    <uib-tab index="0" heading="Basic Info">
+                            <div ng-include="'app/src/reseller/partials/basic_info.html'"></div>
+                    </uib-tab>
+
+                    <uib-tab index="1" heading="Plan">
+                            <div ng-include="'app/src/reseller/partials/plan.html'"></div>
+                    </uib-tab>
+
+                    <uib-tab index="2" heading="Organizations">
+                            <div ng-include="'app/src/reseller/partials/organizations.html'"></div>
+                    </uib-tab>
+
+                    <uib-tab index="3" heading="Users">
+                            <div ng-include="'app/src/reseller/partials/users.html'"></div>
+                    </uib-tab>
+
+                    <uib-tab index="4" heading="Change Log">
+                            <div ng-include="'app/src/reseller/partials/change_logs.html'"></div>
+                    </uib-tab>
+                    <!-- <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" disable="tab.disabled">
+                      {{tab.content}}
+                    </uib-tab>
+                    <uib-tab index="3" select="alertMe()">
+                      <uib-tab-heading>
+                        <i class="glyphicon glyphicon-bell"></i> Alert!
+                      </uib-tab-heading>
+                      I've got an HTML heading, and a select callback. Pretty cool!
+                    </uib-tab> -->
+                  </uib-tabset>
+            		
+            	
+                <div class="clearfix"></div>
+
+
+        	</div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS-->
+<script>
+    // call any jquery or angularjs code ehre
+</script>
+<!-- BEGIN MAIN JS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

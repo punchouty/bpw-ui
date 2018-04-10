@@ -492,7 +492,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 }]);
 
 /* Init global settings and run the app */
-app.run(["$rootScope", "settings", "$state", function($rootScope, settings, $state) {
+app.run(["$rootScope", "settings", "$state", "$stateParams", "__env", function($rootScope, settings, $state, $stateParams, __env) {
     $rootScope.$state = $state; // state to be accessed from view
     $rootScope.$settings = settings; // state to be accessed from view
+    $rootScope.$stateParams = $stateParams;
+    $rootScope.__env = __env;    
 }]);

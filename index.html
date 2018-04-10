@@ -32,6 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css">
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN DYMANICLY LOADED CSS FILES(all plugin and page related styles must be loaded between GLOBAL and THEME css files ) -->
         <link id="ng_load_plugins_before" />
@@ -90,12 +91,16 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
         <!-- END CORE JQUERY PLUGINS -->
         <!-- BEGIN CORE ANGULARJS PLUGINS -->
-        <script src="assets/global/plugins/angularjs/angular.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/angularjs/angular.min.js" type="text/javascript"></script>
         <script src="assets/global/plugins/angularjs/angular-sanitize.min.js" type="text/javascript"></script>
         <script src="assets/global/plugins/angularjs/angular-touch.min.js" type="text/javascript"></script>
         <script src="assets/global/plugins/angularjs/plugins/angular-ui-router.min.js" type="text/javascript"></script>
         <script src="assets/global/plugins/angularjs/plugins/ocLazyLoad.min.js" type="text/javascript"></script>
+        
         <script src="assets/global/plugins/angularjs/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+        <script src="assets/borrowed/aria.js" type="text/javascript"></script>
+
+
         <script src="assets/borrowed/angular-toastr.tpls.js" type="text/javascript"></script>
         <script src="assets/borrowed/toastr.js" type="text/javascript"></script>
         <script src="assets/borrowed/ngStorage.js"></script>
@@ -126,7 +131,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="app/util/router/router-helper.provider.js" type="text/javascript"></script>
         <script src="app/util/directives/thumb.directive.js" type="text/javascript"></script>
         <!-- <script src="app/layout/templates/sidemenu.controller.js" type="text/javascript"></script> -->
+        <script src="app/app.route.js" type="text/javascript"></script>
         
+
         <script src="app/util/auth/auth.config.js" type="text/javascript"></script>
         <script src="app/util/auth/auth.route.js" type="text/javascript"></script>
         <script src="app/util/auth/authorization.service.js" type="text/javascript"></script>
@@ -156,6 +163,12 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="app/profile/profile.controller.js" type="text/javascript"></script>
         <script src="app/profile/profile.service.js" type="text/javascript"></script>
 
+        <script src="app/src/reseller/resellersList.controller.js" type="text/javascript"></script>
+        <script src="app/src/reseller/resellerNew.controller.js" type="text/javascript"></script>
+        <script src="app/src/reseller/resellerView.controller.js" type="text/javascript"></script>
+        <script src="app/src/reseller/reseller.service.js" type="text/javascript"></script>
+
+
 
         <!-- END APP LEVEL ANGULARJS SCRIPTS -->
         <!-- BEGIN APP LEVEL JQUERY SCRIPTS -->
@@ -164,7 +177,8 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
         <script src="assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
         <script src="assets/layouts/layout4/scripts/demo.min.js" type="text/javascript"></script>
-        <!-- END APP LEVEL JQUERY SCRIPTS -->
+        <script src="assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+        <script src="assets/pages/scripts/components-date-time-pickers.min.js" type="text/javascript"></script> <!-- END APP LEVEL JQUERY SCRIPTS -->
 
 
         

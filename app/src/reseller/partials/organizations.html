@@ -1,0 +1,81 @@
+<div class="row" >
+    <div class="col-md-12">
+
+    	<div class="portlet">
+    		<div class="portlet-body">
+
+
+    			<table
+						class="table table-striped table-bordered table-hover"
+						ng-table="vm.tableParams" show-filter="true" >
+						<tr class="odd gradeX" ng-repeat="row in $data">
+							<td data-title="'Name'" sortable="'name'"
+								filter="{ 'name': 'text' }">
+								<a ui-sref="app.resellerView({id: row.id})">{{ row.name }}</a>
+							</td>
+							<td data-title="'Contact'">
+								{{ row.contact }}
+							</td>
+							<td data-title="'Mobile'">
+								{{ row.mobile }}
+							</td>
+							<td data-title="'Email'">
+								{{ row.email }}
+							</td>
+							<td data-title="'Plan'" filter="{ 'plan': 'select' }"  filter-data="vm.plans">
+								{{ row.plan }}
+							</td>							
+							<td data-title="'Quota'" sortable="'quota'"
+								>{{row.quota}}
+							</td>
+							<td data-title="'Quota Consumed'">
+								{{ row.quotaConsumed }}
+							</td>
+							<td data-title="'Start Date'">
+								{{ row.start |  date: 'dd-MM-yyyy'  }}
+							</td>
+							<td data-title="'Expiry'">
+								{{ row.expiry | date: 'dd-MM-yyyy' }}
+							</td>
+							
+							<td data-title="'Status'">
+								<span ng-if="row.status=='Active'"
+								class="label label-sm label-info">Active</span>
+								<span ng-if="row.status=='Deactivated'"
+								class="label label-sm label-danger">Deactivated</span>
+								<span ng-if="row.status=='Quota Consumed'"
+								class="label label-sm label-success">Quota Consumed</span>
+							</td>
+							<td data-title="'Actions'">
+								<div class="btn-group pull-right">
+									<button class="btn btn-xs green dropdown-toggle" type="button"
+										data-toggle="dropdown" aria-expanded="false">
+										Actions <i class="fa fa-angle-down"></i>
+									</button>
+									<ul class="dropdown-menu pull-right" role="menu">	
+									
+										<li ng-if="row.status == 'Active'"><a
+											ng-click="row.status = 'Deactivated'" href="#"> <i
+												class="icon-ban"></i> Disable
+										</a></li>
+										<li ng-if="row.status == 'Deactivated'"><a
+											ng-click="row.status = 'Active'" href="#"> <i
+												class="icon-check"></i> Enable
+										</a></li> 
+									</ul>
+								</div>
+							</td>
+							
+						</tr>
+					</table>
+
+					<div class="clearfix"></div>
+
+
+
+    		</div>
+    	</div>
+
+
+    </div>
+</div>

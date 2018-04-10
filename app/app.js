@@ -13,5 +13,7 @@
         "util.exception",
         "util.router",
         "app.profile",
+        "ngTable",
+        "ngAria"
     ]);
 })();
