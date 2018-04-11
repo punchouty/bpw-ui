@@ -1,0 +1,41 @@
+ <div class="portlet-body form"> 
+
+            		
+    	<div class="col-md-6 col-md-offset-2">
+                    <!-- BEGIN SAMPLE FORM PORTLET-->
+            
+
+            <fieldset ng-form='form1'> 
+
+                <div class="form-body">
+                   <div class="form-group" ng-class="{'has-error':vm.projectForm.name.$dirty && vm.projectForm.name.$invalid}">
+                        <label class="col-md-4 control-label">Project Name</label>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-home"></i>
+                                </span>
+                                <input type="text" class="form-control" name="name" placeholder="Name" ng-model="vm.project.name" required="" aria-describedby="name"  > </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{'has-error':vm.projectForm.page.$dirty && vm.projectForm.page.$invalid}">
+                        <label class="col-md-4 control-label">Page per Sub Project</label>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-clone"></i>
+                                </span>
+                                <input type="text" class="form-control" name="page" placeholder="page" ng-model="vm.project.page" required="" aria-describedby="page"  > </div>
+                        </div>
+                    </div>
+
+                </div>   
+                 
+            </fieldset>
+                                                
+        </div>
+        <div class="clearfix"></div>
+
+
+	</div>

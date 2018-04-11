@@ -5,6 +5,6 @@
        'util.env', 
        'util.logger',
        'ngStorage',
-       'ui.ace'
+       // 'ui.ace'
    ]);
 })();

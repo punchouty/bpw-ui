@@ -1,0 +1,131 @@
+<div class="row" >
+    <div class="col-md-12">
+
+    	<div class="portlet">
+    		<div class="portlet-body"> 
+    			<br>
+
+    			<div id="plan" ng-if="!vm.planEditMode">
+
+			    	<div class="col-xs-4">
+						<table class="table" width='0' border='0' align='right'
+							cellpadding='0' cellspacing='0'>
+							<tbody>
+								<tr >
+									<td align='left' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 16px; padding: 5px 0px 3px 0px; border: none;'>
+										<strong>Name:</strong>
+									</td>
+									<td width='40%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
+										 {{vm.organization.plan}}</td>
+								</tr>	
+								<tr >
+									<td align='left' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 0px 3px 0px; border: none;'>
+										<strong>Quota:</strong>
+									</td>
+									<td width='40%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
+										 {{vm.organization.quota}}</td>
+								</tr>	
+								<tr >
+									<td align='left' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 0px 3px 0px; border: none;'>
+										<strong>Validity:</strong>
+									</td>
+									<td width='40%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
+										 1 Year</td>
+								</tr>
+											
+							</tbody>
+						</table>
+						<br />
+						
+					</div>
+
+					<div class="col-xs-4 col-xs-offset-2">
+						<table class="table" width='0' border='0' align='right'
+							cellpadding='0' cellspacing='0'>
+							<tbody>
+								<tr >
+									<td align='left' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 16px; padding: 5px 0px 3px 0px; border: none;'>
+										<strong>Consumed:</strong>
+									</td>
+									<td width='60%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
+										 {{vm.organization.quotaConsumed}}</td>
+								</tr>	
+								<tr >
+									<td align='left' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 0px 3px 0px; border: none;'>
+										<strong>Start:</strong>
+									</td>
+									<td width='60%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
+										 {{vm.organization.start |  date: 'dd-MM-yyyy'}}</td>
+								</tr>	
+								<tr >
+									<td align='left' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 0px 3px 0px; border: none;'>
+										<strong>Expiry:</strong>
+									</td>
+									<td width='60%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
+										 {{vm.organization.expiry |  date: 'dd-MM-yyyy'}}</td>
+								</tr>
+											
+							</tbody>
+						</table>
+						<br />
+						
+					</div>
+
+					<div class="clearfix"></div>
+
+					<div class="row">
+                        <div class="col-md-offset-3 col-md-9 text-right">
+                            <button type="button" role="button" aria-lable="Change Plan" class="btn green" ng-click="vm.planEditMode = !vm.planEditMode">Change Plan</button> 
+                            <button type="button" role="button" aria-lable="Add Quota" class="btn btn-info" ng-click="vm.planEditMode = !vm.planEditMode">Add Quota</button>                                  
+                        </div>
+                    </div>
+				</div>
+
+
+				<div id="edit-plan" ng-if="vm.planEditMode">
+					  <form class="form-horizontal" role="form" name="vm.organizationForm" ng-submit="vm.onSubmit(vm.organizationForm)" >
+					 		<div class="form-group" ng-class="{'has-error':vm.organizationForm.plan.$dirty && vm.organizationForm.plan.$invalid}">
+                                <label class="col-md-3 control-label">Plan</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" ng-model="vm.organization.plan"
+                                        ng-options="plan for plan in vm.plans" name="plan" ng-change="vm.changePlan(vm.organization.plan)" required aria-describedby="plan" >   
+                                        <option value="">Select</option>                                    
+                                    </select>
+                                </div>
+                            </div>
+                          
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Quota</label>
+                                <div class="col-md-9">
+                                    <div style="margin-top:5px;">{{vm.organization.quota? vm.organization.quota: '-'}}</div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9 text-center">
+                                    <button type="submit" class="btn green" ng-disabled="vm.organizationForm.$invalid">Submit</button>
+                                    <button type="button" class="btn default" ng-click="vm.planEditMode = !vm.planEditMode">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+
+				</div>
+				
+
+			</div>
+		</div>	
+    </div>
+</div>

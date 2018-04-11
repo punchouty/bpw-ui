@@ -14,6 +14,9 @@
         "util.router",
         "app.profile",
         "ngTable",
-        "ngAria"
+        "ngAria",
+        'angularFileUpload',
+        'ngFileUpload',
+        'ui.sortable'
     ]);
 })();

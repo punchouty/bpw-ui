@@ -1,0 +1,60 @@
+<div class="portlet-body form"> 
+
+                    
+        <div class="row">
+
+
+
+        	<div class="col-md-12" ng-repeat="project in vm.projects">
+        		<h4>{{project.name}}</h4>
+	        	<table   class="table table-bordered table-condensed">
+	                <thead>
+	                    <tr>                        
+	                        <th>Name</th>
+	                        <th>url</th>
+	                        <th>User name</th>
+	                        <th>Mobile</th>
+	                        <th>Email</th>
+	                        <th>Actions</th>
+	                    </tr>
+	                </thead>
+	                <tbody >
+	                    <tr ng-repeat="subject in project.subjects" class="item" style="cursor: move;">
+	                        <td>{{subject.name}}</td>
+	                        <td>{{subject.url}}</td>
+
+	                        <td>
+	                        	{{subject.user.name}}
+	                        </td>
+
+	                        <td>
+	                        	{{subject.user.mobile}}
+	                        </td>
+
+	                        <td>
+	                        	{{subject.user.email}}
+	                        </td>
+
+	                        <td> 
+                                <button  class="btn btn-xs btn-info no-margin" type="button"
+									 ng-click="vm.selectUser(subject)">
+										<i class="icon-pencil"></i> Edit User
+								</button>
+                                                          
+	                        </td>
+	                    </tr>
+	                </tbody>
+	                <hr>
+	            </table>
+        </div>
+
+</div>
+
+
+
+
+
+
+        </div>
+
+</div>

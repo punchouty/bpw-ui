@@ -14,7 +14,7 @@
 
     function signin() {
     	console.log(vm.mobile + " : " + vm.password + " : " + vm.rememberMe);
-		  $state.go('app.resellers');
+		  $state.go('app.organizations');
     }
 
     activate();

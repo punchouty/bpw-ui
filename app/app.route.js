@@ -12,55 +12,45 @@
   }
 
   function getStates() {
-    return [      
-      {
-            state: 'app.resellers',
+    return [  
+         {
+            state: 'app.organizations',
             config:  { 
-               url: "/resellers",
-               templateUrl: "app/src/reseller/list.html",            
-               data: {pageTitle: 'Resellers'},
-               controller: "resellersListCtrl",
+               url: "/organizations",
+               templateUrl: "app/src/organization/list.html",            
+               data: {pageTitle: 'Organizations'},
+               controller: "organizationsListCtrl",
                controllerAs: 'vm'               
             }
         },
         {
-            state: 'app.new-reseller',
+            state: 'app.newOrganization',
             config:  { 
-               url: "/resellers/new",
-               templateUrl: "app/src/reseller/new.html",            
-               data: {pageTitle: 'Add Reseller'},
-               controller: "resellerNewCtrl",
+               url: "/organizations/new",
+               templateUrl: "app/src/organization/new.html",            
+               data: {pageTitle: 'Add Organization'},
+               controller: "organizationNewCtrl",
                controllerAs: 'vm'               
             }
         },
          {
-            state: 'app.resellerView',
+            state: 'app.organizationView',
             config:  { 
-               url: "/resellers/:id/view",
-               templateUrl: "app/src/reseller/view.html",            
-               data: {pageTitle: 'Reseller View'},
-               controller: "resellerViewCtrl",
+               url: "/organizations/:id/view",
+               templateUrl: "app/src/organization/view.html",            
+               data: {pageTitle: 'Organization View'},
+               controller: "organizationViewCtrl",
                controllerAs: 'vm'               
             }
         },
         {
-            state: 'app.organizations',
+            state: 'app.projects',
             config:  { 
-               url: "/organizations",
-               templateUrl: "views/blank.html",            
-               data: {pageTitle: 'Organizations'},
-               controller: "BlankController",
-               resolve: {
-                   deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                       return $ocLazyLoad.load({
-                           name: 'MetronicApp',
-                           insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                           files: [
-                               'js/controllers/BlankController.js'
-                           ] 
-                       });
-                   }]
-               }
+               url: "/projects",
+               templateUrl: "app/src/project/new.html",            
+               data: {pageTitle: 'New Project'},
+               controller: "projectCtrl",
+               controllerAs: 'vm'               
             }
         },
         {

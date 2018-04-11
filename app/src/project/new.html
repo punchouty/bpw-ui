@@ -1,0 +1,74 @@
+<!-- <link href="assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" /> -->
+
+          <div class="row">
+                <div class="col-md-12">
+                   
+                    <div class="portlet light bordered" id="form_wizard_1">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class=" icon-layers font-green"></i>
+                                <span class="caption-subject font-green bold uppercase"> Project -
+                                    <span class="step-title"> Step {{vm.currentStep}} of {{vm.steps.length}} </span>
+                                </span>
+                            </div>
+                            <!-- <div class="actions">
+                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                    <i class="icon-cloud-upload"></i>
+                                </a>
+                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                    <i class="icon-wrench"></i>
+                                </a>
+                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                    <i class="icon-trash"></i>
+                                </a>
+                            </div> -->
+                        </div>
+                        <div class="portlet-body form">
+                            <div class="form-horizontal" >
+                                <div class="form-wizard">
+                                    <form class="form-horizontal" role="form" name="vm.projectForm" ng-submit="vm.onSubmit(vm.projectForm)" >
+
+                                        <div class="form-body">
+                                            <ul class="nav nav-pills nav-justified steps">
+                                                <li ng-repeat="step in vm.steps" ng-class="{'active':step.step == vm.currentStep, 'done': step.step < vm.currentStep}"><a  class="step" href="javascript:;"><span class="number"> {{step.step}} </span>  <span class="desc"><i class="fa fa-check"></i>{{step.name}}</span></a> </li>                   
+                                            </ul>
+                                            <div id="bar" class="progress progress-striped" role="progressbar">
+                                                <div class="progress-bar progress-bar-success" ng-style="{ 'width': vm.getProgress() + '%' }"> </div>
+                                            </div>
+                                            <div class="tab-content">   
+                                                <div id="wizard-content-container">
+                                                  <ng-include src="vm.getStepTemplate()"></ng-include>
+                                                  <!-- {{vm.getStepTemplate()}} -->
+                                                </div>
+                                              
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-md-offset-9 col-md-3 pull-right">
+
+                                                    <button  class="btn btn-success" ng-if="vm.currentStep > 1" ng-click="vm.gotoStep(vm.currentStep - 1)">
+                                                        <i class="fa fa-angle-left"></i> Back </button>
+
+                                                    <button  class="btn btn-success" ng-if="vm.currentStep < (vm.steps.length)"  ng-click="vm.gotoStep(vm.currentStep + 1)"
+                                                    ng-disabled="vm.check(vm.currentStep, vm.projectForm)"> Continue &nbsp;
+                                                        <i class="fa fa-angle-right"></i>
+                                                    </button>
+
+                                                    <button  class="btn btn-success" ng-if="(vm.currentStep == vm.steps.length)"  ng-click="vm.saveProject()"> Done
+                                                        <i class="fa fa-check"></i>
+                                                    </button>     
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                   
+                                        
+                                   </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

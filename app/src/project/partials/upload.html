@@ -1,0 +1,99 @@
+<div class="panel-body">
+           
+                      <!-- <div ng-include="'src/layouts/Upload.html'"></div> -->
+
+                    <fieldset ng-form='form2'> 
+                        <div class="row">
+                          <!-- <div class="btn btn-primary" ngf-select ng-model="files" ngf-multiple="true" ngf-pattern="'image/*'" ngf-accept="'image/*'">Add Images</div>
+
+                         </div> 
+                         <div class="row">
+                          <button type="submit" ng-click="uploadFiles($files)">submit</button>
+                         </div> -->
+
+
+                          <!-- <input type="file" ngf-select ng-model="picFile" name="file"    
+                                 ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="2MB" ngf-multiple="true" required accept="image/*" 
+                                 ngf-model-invalid="errorFile">
+                          <i ng-show="floor_form.file.$error.required">*required</i><br>
+                          <i ng-show="floor_form.file.$error.maxSize">File too large 
+                              {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+                         
+                          <br>
+                          
+                          <span class="progress" ng-show="picFile.progress >= 0">
+                            <div style="width:{{picFile.progress}}%" 
+                                ng-bind="picFile.progress + '%'"></div>
+                          </span>
+                          <span ng-show="picFile.result">Upload Successful</span>
+                          <span class="err" ng-show="errorMsg">{{errorMsg}}</span> -->
+
+
+                            <div class="col-md-4">
+
+                              <div class="btn btn-sm green btn-flat ft-modal-upload-btn-select-files" 
+                                 ngf-select ng-model="vm.files" role="button" aria-label="click to upload pdf files" accept="application/pdf"  ngf-accept="'application/pdf'" ngf-pattern="'application/pdf'"
+                                 ngf-multiple="true" ngf-fix-orientation="false"
+                                 ngf-keep="'distinct'" ngf-max-size="25MB">
+                                   <i class="fa fa-plus"></i>   Upload File 
+                              </div>
+                             
+                              <hr>                              
+
+                            </div>  
+
+                            <div class="col-md-8">
+                              <div class="table-scrollable table-scrollable-borderless">
+                                <table class="table table-hover table-light">
+                                  <thead>
+                                    <tr class="uppercase">
+                                      <th width="50%">Name</th>
+                                      <th>Size</th>
+                                      <th>Preview</th>
+                                      <th align="right" class="text-center">Actions</th>
+                                    </tr>
+                                  </thead>
+
+                                  <tbody>
+                                    <tr ng-repeat="file in vm.files track by $index"  ng-if="vm.files != null">
+
+                                      <td><strong>{{ file.name }}</strong></td>
+                                      <td>{{ file.size / 1000000|number: 1 }} MB</td>
+                                      <td> <img width="100" height="100" ngf-thumbnail="file"></td>
+                                      <td><a class="btn btn-danger btn-xs ft-modal-upload-delete-file" ng-click="vm.deleteFile(vm.files, file)" role="button" aria-label="delete file"><i class="fa fa-trash"></i> Delete</a></td>
+
+                                    </tr>    
+                                  </tbody>
+                                </table>
+                              </div>    
+
+                              <div class="progress progress-sm" style="">
+                                <div class="progress-bar"
+                                  role="progressbar"
+                                  ng-style="{ 'width': progress + '%' }" ng-class="{'progress-bar-info': progress<100, 'progress-bar-success': progress>=100}"></div>
+                              </div>
+                                  <span ng-show="result">Upload Successful</span>
+
+
+                              <!-- <div style="width:{{files.progress}}%" 
+                                          ng-bind="files.progress + '%'"></div>
+                                    </span>
+                                 <span ng-show="files.result">Upload Successful</span>
+                                 <span class="err" ng-show="errorMsg">{{errorMsg}}</span>                                
+
+                              </div> -->   
+
+                              <div>
+                                <button type="submit" class="btn btn-success btn-sm btn-s pull-right"  ng-click="vm.uploadFiles($files)"  ng-disabled="!vm.files" role="button" aria-label="upload files">
+                                    <span class="glyphicon glyphicon-upload"></span> Upload
+                                </button>
+                              </div>  
+
+                              
+                          	</div>
+
+
+                          </div>
+                      </fieldset>
+                    
+                  </div>

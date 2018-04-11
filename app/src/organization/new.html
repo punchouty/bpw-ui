@@ -1,0 +1,215 @@
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <!-- <li>
+        <a ui-sref="dashboard">Blank Page</a>
+        <i class="fa fa-circle"></i>
+    </li> -->
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row" >
+    <div class="col-md-12">
+        <!-- BEGIN: ACCORDION DEMO -->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-green-sharp">
+                    <i class="icon-settings font-green-sharp"></i>
+                    <span class="caption-subject bold uppercase">New Organization</span>
+                    <span class="caption-helper hide"></span>
+                </div>
+                <div class="actions">
+                   <!--  <a class="btn btn-circle  green" href="#">
+                        <i class="fa fa-plus"></i> Add
+                    </a> -->
+                   <!--  <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                        <i class="icon-wrench"></i>
+                    </a> -->
+                   <!--   <a class="btn red btn-outline btn-circle" href="#" ng-click="vm.goBack()">  <i class="fa  fa-mail-reply"></i> Back </a> -->
+                </div>
+            </div>
+            <div class="portlet-body form"> 
+
+            		
+            	<div class="col-md-6 col-md-offset-2">
+                            <!-- BEGIN SAMPLE FORM PORTLET-->
+                    <form class="form-horizontal" role="form" name="vm.organizationForm" ng-submit="vm.onSubmit(vm.organizationForm)" >
+                        <div class="form-body">
+                           <div class="form-group" ng-class="{'has-error':vm.organizationForm.name.$dirty && vm.organizationForm.name.$invalid}">
+                                <label class="col-md-3 control-label">Organization</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-home"></i>
+                                        </span>
+                                        <input type="text" class="form-control" name="name" placeholder="Name" ng-model="vm.organization.name" required="" aria-describedby="name"  > </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{'has-error':vm.organizationForm.code.$dirty && vm.organizationForm.code.$invalid}">
+                                <label class="col-md-3 control-label">Organization Code</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-clone"></i>
+                                        </span>
+                                        <input type="text" class="form-control" name="code" placeholder="Code" ng-model="vm.organization.code" required="" aria-describedby="code"  > </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Access Url</label>
+                                <div class="col-md-9">
+                                    <div style="margin-top:5px;">
+                                        http://www.bpw.com/{{vm.organization.code}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="form-group" ng-class="{'has-error':vm.organizationForm.contact.$dirty && vm.organizationForm.contact.$invalid}">
+                                <label class="col-md-3 control-label">Contact</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                    	 <span class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        <input type="text" name="contact" class="form-control" placeholder="Contact" ng-model="vm.organization.contact" required="" aria-describedby="contact"  >
+                                       
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="form-group" ng-class="{'has-error':vm.organizationForm.mobile.$dirty && vm.organizationForm.mobile.$invalid}">
+                                <label class="col-md-3 control-label">Mobile</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <div class="input-icon">
+                                            <i class="fa fa-search"></i>
+                                            <input id="mobile" class="form-control" type="text" name="mobile" placeholder="Mobile" ng-model="vm.organization.mobile" ng-pattern="/^[789]\d{9}$/" maxlength="10" required aria-describedby="mobile" > </div>
+                                        <span class="input-group-btn">
+                                            <button id="search" class="btn btn-success" type="button" ng-click="vm.search(vm.organization.mobile)" role="button" aria-label="search with mobile">
+                                                <i class="fa fa-arrow-left fa-fw"></i> Search</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{'has-error':vm.organizationForm.email.$dirty && vm.organizationForm.email.$invalid}">
+                                <label class="col-md-3 control-label">Email Address</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                        <input type="email" class="form-control" name="email" placeholder="Email Address" ng-model="vm.organization.email" required aria-describedby="email" > </div>
+                                </div>
+                            </div>
+                           
+                          <!--   <div class="form-group" ng-class="{'has-error':vm.organizationForm.plan.$dirty && vm.organizationForm.plan.$invalid}">
+                                <label class="col-md-3 control-label">Plan</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" ng-model="vm.organization.plan"
+                                        ng-options="plan for plan in vm.plans" name="plan" ng-change="vm.changePlan(vm.organization.plan)" required aria-describedby="plan" >   
+                                        <option value="">Select</option>                                    
+                                    </select>
+                                </div>
+                            </div> -->
+                          
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Quota</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-info"></i>
+                                        </span>
+                                        <input type="text" class="form-control" name="quota" placeholder="Quota" ng-model="vm.organization.quota" required aria-describedby="quota" > </div>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="form-group" ng-init="vm.initDatepicker()" ng-class="{'has-error':vm.organizationForm.start.$dirty && vm.organizationForm.start.$invalid}">
+                                <label class="control-label col-md-3">Start</label>
+                                <div class="col-md-9">
+                                    <div class="input-group date date-picker" id="start" data-date-format="dd-mm-yyyy">
+                                        <input type="text" class="form-control" readonly="" name="start" ng-model="vm.start" required aria-describedby="start date" > 
+                                        <span class="input-group-btn">
+                                            <button class="btn default" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-init="vm.initDatepicker2()" ng-class="{'has-error':vm.organizationForm.expiry.$dirty && vm.organizationForm.expiry.$invalid}">
+                                <label class="control-label col-md-3">Expiry</label>
+                                <div class="col-md-9">
+                                    <div class="input-group date date-picker" id="expiry"  data-date-format="dd-mm-yyyy">
+                                        <input type="text" class="form-control" name="expiry" readonly="" ng-model="vm.expiry" required aria-describedby="expiry" >
+                                        <span class="input-group-btn">
+                                            <button class="btn default" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+
+
+                           
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9 text-center">
+                                    <button type="submit" class="btn green" ng-disabled="vm.organizationForm.$invalid">Submit</button>
+                                    <button type="button" class="btn default" ng-click="vm.goBack()">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                                                        
+                </div>
+                <div class="clearfix"></div>
+
+
+        	</div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS-->
+<script>
+    // call any jquery or angularjs code ehre
+</script>
+<!-- BEGIN MAIN JS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

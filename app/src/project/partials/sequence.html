@@ -1,0 +1,35 @@
+ <div class="portlet-body form"> 
+
+                    
+        <div class="col-md-12">
+
+            <table  class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>name</th>
+                        <th>url</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody ui-sortable="sortableOptions" ng-model="vm.list">
+                    <tr ng-repeat="item in vm.list" class="item" style="cursor: move;">
+                        <td>{{$index}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.url}}</td>
+                        <td> 
+                            <button class="btn btn-icon-only btn-xs blue" ng-click="moveUp(item)" ng-hide="$index === 0" role="button" aria-label="toggle up"><i class="fa fa-angle-up"></i></button>
+                            <button class="btn btn-icon-only btn-xs green" ng-click="moveDown(item)" ng-hide="$index === vm.list.length -1" role="button" aria-label="toggle down"><i class="fa fa-angle-down"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+                <hr>
+            </table>
+
+        </div>
+
+        <div class="clearfix"></div>
+        
+       
+
+</div>
