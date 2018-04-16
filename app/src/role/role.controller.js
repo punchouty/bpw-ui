@@ -84,7 +84,7 @@
         self.role = {};
         var modalInstance = $uibModal.open({
           animation : self.animationsEnabled,
-          templateUrl : '/app/src/role/_new.html',
+          templateUrl : '/app/src/role/new.html',
           controller : ModalInstanceCtrl,
           windowClass: 'z-dialog',
           controllerAs : '$ctrl'
@@ -96,7 +96,7 @@
         self.role = role;
         var modalInstance = $uibModal.open({
           animation : self.animationsEnabled,
-          templateUrl : 'app/src/role/_edit.html',
+          templateUrl : 'app/src/role/edit.html',
           controller : ModalInstanceCtrl,
           windowClass: 'z-dialog',
           controllerAs : '$ctrl'
