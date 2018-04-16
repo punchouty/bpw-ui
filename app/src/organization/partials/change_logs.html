@@ -15,17 +15,17 @@
 							<td data-title="'Date'">
 								{{ row.date |  date: 'dd-MM-yyyy'  }}
 							</td>
-							<td data-title="'User'">
-								{{ row.user }}
+							<td data-title="'Changes'">
+								{{ row.changes }}
 							</td>							
-							<td data-title="'Plan'">
-								{{ row.plan }}
+							<td data-title="'Organization'">
+								{{ row.organization }}
 							</td>							
-							<td data-title="'Quota'"
+							<td data-title="'Total Quota'"
 								>{{row.quota}}
 							</td>
-							<td data-title="'Comments'">
-								{{ row.comments }}
+							<td data-title="'Quota Expiry'">
+								{{ row.date |  date: 'dd-MM-yyyy' }}
 							</td>
 							
 							

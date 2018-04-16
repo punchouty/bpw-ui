@@ -11,8 +11,8 @@
     "mobile": "9111111111",
     "address": "797 Delmonico Place, Sattley, Florida, 2091",
     "plan": "Basic",
-    "start": "2014-04-23T01:44:32 -06:-30",
-    "expiry": "2015-06-26T11:34:00 -06:-30",
+    "start": "2014-04-23T01:44:32",
+    "expiry": "2015-06-26T11:34:00",
     "quota": 30417,
     "quotaConsumed": 29617
   },
@@ -28,8 +28,8 @@
     "mobile": "9111111112",
     "address": "161 Poplar Street, Churchill, Northern Mariana Islands, 7085",
     "plan": "Intermediate",
-    "start": "2016-07-24T07:26:02 -06:-30",
-    "expiry": "2017-02-11T08:46:03 -06:-30",
+    "start": "2016-07-24T07:26:02",
+    "expiry": "2017-02-11T08:46:03",
     "quota": 32726,
     "quotaConsumed": 31926
   },
@@ -45,8 +45,8 @@
     "mobile": "9111111113",
     "address": "342 Brooklyn Avenue, Brule, Federated States Of Micronesia, 6400",
     "plan": "Advance",
-    "start": "2015-07-30T10:11:40 -06:-30",
-    "expiry": "2017-01-29T02:35:26 -06:-30",
+    "start": "2015-07-30T10:11:40",
+    "expiry": "2017-01-29T02:35:26",
     "quota": 1009,
     "quotaConsumed": 209
   },
@@ -62,8 +62,8 @@
     "mobile": "9111111114",
     "address": "693 Allen Avenue, Warsaw, Massachusetts, 4573",
     "plan": "Basic",
-    "start": "2015-10-25T09:15:25 -06:-30",
-    "expiry": "2017-02-19T05:51:58 -06:-30",
+    "start": "2015-10-25T09:15:25",
+    "expiry": "2017-02-19T05:51:58",
     "quota": 19787,
     "quotaConsumed": 18987
   }

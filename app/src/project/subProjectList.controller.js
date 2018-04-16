@@ -3,26 +3,27 @@
 
   angular
     .module('app')
-    .controller('usersListCtrl', usersListCtrl);
+    .controller('subProjectListCtrl', subProjectListCtrl);
 
-  usersListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'userFactory' , '$rootScope' ];
+  subProjectListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'projectFactory' , '$rootScope', '$window'];
   /* @ngInject */
-  function usersListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , userFactory , $rootScope ) {
+  function subProjectListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , projectFactory , $rootScope, $window ) {
 
     var self = this;
 
     self.totalCount = 100;
-    self.roles = [{id: "Project Admin", title: "Project Admin"},{id: "Volunteer", title: "Volunteer"}];
-
+    self.plans = [{id: "Basic", title:"Basic"},{id: "Advance", title:"Advance"},{id: "Intermediate",title: "Intermediate"}];
+    self.projectId = $stateParams.id;
 
     activate();
 
     function activate() {
       self.master=[]
       
-      userFactory.getUsers()
+      projectFactory.getProjectById(self.projectId)
           .then(function(response) {  
-               self.master = response.data;                 
+              self.project = response.data;
+               self.master = response.data.subProjects;                 
                console.log(self.master);
                pagination();  
           },function() {
@@ -102,7 +103,10 @@
         });
     }
   
-
+    self.goBack = function() {
+      // $window.history.go(-2);
+      $window.history.back();
+    }
   
    
   

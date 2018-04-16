@@ -27,6 +27,26 @@
 			return promise;
 		};
 
+		service.getProjectById = function(projectId) {
+			var promise = $http.get("data/project.json")
+					.then(function(data) {
+						return data;
+					}, function(errors) {
+						return errors;
+					});
+			return promise;
+		};
+
+		service.getSubProjectById = function(subProjectId) {
+			var promise = $http.get("data/sub_project.json")
+					.then(function(data) {
+						return data;
+					}, function(errors) {
+						return errors;
+					});
+			return promise;
+		};
+
 		
 		return service;
 	};

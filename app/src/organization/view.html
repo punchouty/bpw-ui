@@ -36,30 +36,25 @@
                             <div ng-include="'app/src/organization/partials/basic_info.html'"></div>
                     </uib-tab>
 
-                    <!-- <uib-tab index="1" heading="Plan">
-                            <div ng-include="'app/src/organization/partials/plan.html'"></div>
-                    </uib-tab> -->
+                    <uib-tab index="1" heading="Quota">
+                            <div ng-include="'app/src/organization/partials/quota.html'"></div>
+                    </uib-tab>
 
                    <!--  <uib-tab index="2" heading="Resellers">
                             <div ng-include="'app/src/organization/partials/resellers.html'"></div>
                     </uib-tab> -->
 
-                    <uib-tab index="3" heading="Users" role="tab">
+                   <!--  <uib-tab index="3" heading="Users" role="tab">
                             <div ng-include="'app/src/organization/partials/users.html'"></div>
-                    </uib-tab>
-
-                    <uib-tab index="4" heading="Change Log" role="tab">
-                            <div ng-include="'app/src/organization/partials/change_logs.html'"></div>
-                    </uib-tab>
-                    <!-- <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" disable="tab.disabled">
-                      {{tab.content}}
-                    </uib-tab>
-                    <uib-tab index="3" select="alertMe()">
-                      <uib-tab-heading>
-                        <i class="glyphicon glyphicon-bell"></i> Alert!
-                      </uib-tab-heading>
-                      I've got an HTML heading, and a select callback. Pretty cool!
                     </uib-tab> -->
+
+                    <uib-tab index="2" heading="Quota Transfer" role="tab">
+                            <div ng-include="'app/src/organization/partials/transfer.html'"></div>
+                    </uib-tab>  
+
+                    <uib-tab index="3" heading="Change Log" role="tab">
+                            <div ng-include="'app/src/organization/partials/change_logs.html'"></div>
+                    </uib-tab>                   
                   </uib-tabset>
             		
             	

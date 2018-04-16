@@ -15,11 +15,11 @@
             <div class="portlet-title">
                 <div class="caption font-green-sharp">
                     <i class="icon-settings font-green-sharp"></i>
-                    <span class="caption-subject bold uppercase">Users List</span>
+                    <span class="caption-subject bold uppercase">Projects List</span>
                     <span class="caption-helper hide"></span>
                 </div>
                 <div class="actions">
-                    <a class="btn btn-circle  green" ui-sref="app.newUser" role="link" aria-label="add user">
+                    <a class="btn btn-circle  green" ui-sref="app.newProject" role="link" aria-label="add organization">
                         <i class="fa fa-plus"></i> Add
                     </a>
                    <!--  <a class="btn btn-circle btn-icon-only btn-default" href="#">
@@ -35,41 +35,33 @@
 						<tr class="odd gradeX" ng-repeat="row in $data">
 							<td data-title="'Name'" sortable="'name'"
 								filter="{ 'name': 'text' }" width="10%">
-								<a ui-sref="app.userView({id: row.id})">{{ row.name }}</a>
+								<a ui-sref="app.projectView({id: row.id})">{{ row.name }}</a>
 							</td>
-							
-							<td data-title="'Mobile'" width="8%">
-								{{ row.mobile }}
+							<td data-title="'Pages'" width="10%">
+								{{ row.pages }}
 							</td>
-							<td data-title="'Email'" width="8%">
-								{{ row.email }}
+							<td data-title="'Sub Projects'" width="10%">
+								{{ row.subProjects.length }}
 							</td>
-							<td data-title="'Organization'" width="8%">
-								{{ row.organization }}
+							<td data-title="'Link'" width="10%">
+								{{ row.url }}
+							</td>							
+							<td data-title="'Date Created'" width="12%">
+								{{ row.date |  date: 'dd MMM yyyy'  }}
 							</td>
-							<td data-title="'Address'" width="8%">
-								{{ row.address }}
-							</td>
-							
-							<td data-title="'Role'" filter="{ 'role': 'select' }"  filter-data="vm.roles" width="8%">
-								{{ row.role }}
+							<td data-title="'Created By'" width="10%">
+								{{ row.createdBy }}
 							</td>							
 						
-							<td data-title="'Actions'" width="10%">
+							<td data-title="'Actions'" width="8%">
 
 								 <div class="btn-group btn-group-xs btn-group-solid button-margin-class">
 	                                  
                                     <a class="btn btn-xs btn-info no-margin" type="button"
-									 ui-sref="app.userView({id: row.id})">
+									 ui-sref="app.projectView({id: row.id})">
 										<i class="icon-magnifier"></i> View
 									</a>
-									<button ng-if="row.status == 'Active'" class="btn btn-xs btn-danger no-margin" type="button" ng-click="row.status = 'Deactivated'">
-										<i class="icon-ban"></i> Deactivate
-									</button>
-									<button  ng-if="row.status == 'Deactivated'" class="btn btn-xs btn-success no-margin" type="button" ng-click="row.status = 'Active'">
-										<i class="icon-ban"></i> Activate
-									</button>								
-										
+									
                               
                                 </div>
 								

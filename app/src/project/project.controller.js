@@ -195,7 +195,7 @@
     }
 
     self.saveProject = function() {
-      $state.reload();
+      $state.go('app.projects');
       logger.info("Done");
     }
 

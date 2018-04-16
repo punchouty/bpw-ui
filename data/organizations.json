@@ -16,7 +16,10 @@
     "quota": 30417,
     "reseller": "demo reseller 1",
     "code": "code1",
-    "quotaConsumed": 29617
+    "quotaConsumed": 29617,
+    "docsProcessed": 12000,
+    "lastIncrease": 100000,
+    "updateDate": "2018-01-23T01:44:32"
   },
   {
     "id": "5acb35c73a5dd5dfff3ae8e3",
@@ -35,7 +38,10 @@
     "quota": 32726,
     "reseller": "demo reseller 2",
     "code": "code2",
-    "quotaConsumed": 31926
+    "quotaConsumed": 31926,
+    "docsProcessed": 13000,
+    "lastIncrease": 100000,
+    "updateDate": "2018-02-23T01:44:32"
   },
   {
     "id": "5acb35c7ca44043df753db3a",
@@ -54,6 +60,9 @@
     "quota": 1009,
     "reseller": "demo reseller 3",
     "code": "code3",
-    "quotaConsumed": 209
+    "quotaConsumed": 209,
+    "docsProcessed": 14000,
+    "lastIncrease": 100000,
+    "updateDate": "2018-03-23T01:44:32"
   }
 ]

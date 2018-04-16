@@ -11,7 +11,7 @@
 
     var self = this;
 
-    self.roles = ["Admin", "Role A", "Role B"];
+    self.roles = ["Project Admin", "Volunteer"];
    
 
     self.user = {};
@@ -41,6 +41,7 @@
     }
 
     self.onSubmit = function(form) {
+      console.log(self.user);
       if(form.$invalid) {
         logger.error("Invalid details");
       } else {

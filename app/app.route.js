@@ -47,9 +47,39 @@
             state: 'app.projects',
             config:  { 
                url: "/projects",
+               templateUrl: "app/src/project/list.html",            
+               data: {pageTitle: 'Projects'},
+               controller: "projectsListCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+        {
+            state: 'app.newProject',
+            config:  { 
+               url: "/projects/new",
                templateUrl: "app/src/project/new.html",            
                data: {pageTitle: 'New Project'},
                controller: "projectCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+         {
+            state: 'app.projectView',
+            config:  { 
+               url: "/projects/:id/view",
+               templateUrl: "app/src/project/subList.html",            
+               data: {pageTitle: 'Project'},
+               controller: "subProjectListCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+        {
+            state: 'app.subProjectView',
+            config:  { 
+               url: "/projects/sub/:id/view",
+               templateUrl: "app/src/project/subView.html",            
+               data: {pageTitle: 'Project'},
+               controller: "subProjectViewCtrl",
                controllerAs: 'vm'               
             }
         },

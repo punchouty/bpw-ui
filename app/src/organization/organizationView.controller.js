@@ -210,9 +210,8 @@
         self.organization.quota = self.quotas[plan];
     }
 
-    self.search = function(mobile) {
-        self.organization.contact = "demo";
-        self.organization.email = "demo@demo.com";
+    self.searchOrg = function(org) {
+        self.quota.organization = "demo organization";       
     }
 
     self.onSubmit = function(form) {

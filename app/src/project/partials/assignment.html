@@ -19,25 +19,25 @@
 	                    </tr>
 	                </thead>
 	                <tbody >
-	                    <tr ng-repeat="subject in project.subjects" class="item" style="cursor: move;">
-	                        <td>{{subject.name}}</td>
-	                        <td>{{subject.url}}</td>
+	                    <tr ng-repeat="subProject in project.subProjects" class="item" style="cursor: move;">
+	                        <td>{{subProject.name}}</td>
+	                        <td>{{subProject.url}}</td>
 
 	                        <td>
-	                        	{{subject.user.name}}
+	                        	{{subProject.user.name}}
 	                        </td>
 
 	                        <td>
-	                        	{{subject.user.mobile}}
+	                        	{{subProject.user.mobile}}
 	                        </td>
 
 	                        <td>
-	                        	{{subject.user.email}}
+	                        	{{subProject.user.email}}
 	                        </td>
 
 	                        <td> 
                                 <button  class="btn btn-xs btn-info no-margin" type="button"
-									 ng-click="vm.selectUser(subject)">
+									 ng-click="vm.selectUser(subProject)">
 										<i class="icon-pencil"></i> Edit User
 								</button>
                                                           

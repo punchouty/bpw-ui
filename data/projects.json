@@ -2,54 +2,97 @@
   {
     "id": "5acb35c790c30b479a55f88e",
     "index": 0,
-    "name": "project 1",
-    "subjects":[{
-            "name": "subject 1",
-            "url": "http://www.abc.com/subject 1",
+    "name": "Harry Potter",
+    "pages": 250,
+    "url": "http://www.abc.com/harry-potter",
+    "date": "2015-06-26T11:34:00",
+    "createdBy": "Vodemont",
+     "subProjects":[{
+        "id": "5acb35c73a5dd5dfff3ae8e4",
+            "name": "4.1",
+            "url": "http://www.abc.com/harry-potter/4-1",
             "user":{
                 "name": "Jennifer Rosario",
                 "gender": "female",
                 "company": "XIXAN",
                 "email": "sario@xixan.com",
                 "mobile": "9111111111"
-            }
+            },
+            "pages": 10,
+            "pdf_file":"abc.pdf",
+            "word_file": "abc.docx",
+            "words": 5467
         },{
-            "name": "subject 2",
-            "url": "http://www.abc.com/subject 2",
+            "id": "5acb35c73a5dd5dfff3ae8e6",
+            "name": "4.2",
+            "url": "http://www.abc.com/harry-potter/4-2",
             "user":{
                 "name": "Steele Barr",
                 "gender": "male",
                 "company": "OBLIQ",
                 "email": "barr@obliq.com",
                 "mobile": "9111111112"
-            }
+            },
+            "pages": 10,
+            "pdf_file":"efg.pdf",
+            "word_file": "efg.docx",
+            "words": 4578
+        },{
+            "id": "5acb35c73a5dd5dfff3ae8e5",
+            "name": "4.3",
+            "url": "http://www.abc.com/harry-potter/4-3",
+            "user":{
+                "name": "John Doe",
+                "gender": "male",
+                "company": "Hello",
+                "email": "barr@obliq.com",
+                "mobile": "9111111113"
+            },
+            "pages": 10,
+            "pdf_file":"xyz.pdf",
+            "word_file": "xyz.docx",
+            "words": 6532
         }]
    
   },
   {
     "id": "5acb35c73a5dd5dfff3ae8e3",
     "index": 1,
-    "name": "project 2",
-    "subjects":[{
-            "name": "subject 1",
-            "url": "http://www.abc.com/subject 1",
+    "name": "Lord of rings",
+    "pages": 300,
+    "url": "http://www.abc.com/lord-of-rings",
+    "date": "2016-08-21T11:34:00",
+    "createdBy": "Sauron",
+     "subProjects":[{
+        "id": "5acb35c73a5dd5dfff3ae8e4",
+            "name": "4.1",
+            "url": "http://www.abc.com/lord-of-rings/4-1",
             "user":{
                 "name": "Jennifer Rosario",
                 "gender": "female",
                 "company": "XIXAN",
                 "email": "sario@xixan.com",
                 "mobile": "9111111111"
-            }
+            },
+            "pages": 10,
+            "pdf_file":"abc.pdf",
+            "word_file": "abc.docx",
+            "words": 5467
         },{
-            "name": "subject 2",
-            "url": "http://www.abc.com/subject 2",
+            "id": "5acb35c73a5dd5dfff3ae8e6",
+            "name": "4.2",
+            "url": "http://www.abc.com/lord-of-rings/4-2",
             "user":{
                 "name": "Steele Barr",
                 "gender": "male",
                 "company": "OBLIQ",
                 "email": "barr@obliq.com",
                 "mobile": "9111111112"
-            }
+            },
+            "pages": 10,
+            "pdf_file":"efg.pdf",
+            "word_file": "efg.docx",
+            "words": 4578
         }]
     
   }

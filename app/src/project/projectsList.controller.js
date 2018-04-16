@@ -3,16 +3,16 @@
 
   angular
     .module('app')
-    .controller('usersListCtrl', usersListCtrl);
+    .controller('projectsListCtrl', projectsListCtrl);
 
-  usersListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'userFactory' , '$rootScope' ];
+  projectsListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'projectFactory' , '$rootScope' ];
   /* @ngInject */
-  function usersListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , userFactory , $rootScope ) {
+  function projectsListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , projectFactory , $rootScope ) {
 
     var self = this;
 
     self.totalCount = 100;
-    self.roles = [{id: "Project Admin", title: "Project Admin"},{id: "Volunteer", title: "Volunteer"}];
+    self.plans = [{id: "Basic", title:"Basic"},{id: "Advance", title:"Advance"},{id: "Intermediate",title: "Intermediate"}];
 
 
     activate();
@@ -20,7 +20,7 @@
     function activate() {
       self.master=[]
       
-      userFactory.getUsers()
+      projectFactory.getProjects()
           .then(function(response) {  
                self.master = response.data;                 
                console.log(self.master);

@@ -93,7 +93,22 @@
                                 </div>
                             </div>
                           
-                           
+                            <div class="form-group"  ng-class="{'has-error':vm.userForm.type.$dirty && vm.userForm.type.$invalid}">
+                                <label class="col-md-3 control-label">Type</label>
+                                <div class="col-md-9">
+                                    <div class="mt-radio-inline">
+                                        <label class="mt-radio">
+                                            <input type="radio" name="type" id="optionsRadios4" value="Paid" ng-model="vm.user.type" checked=""> Paid
+                                            <span></span>
+                                        </label>
+                                        <label class="mt-radio">
+                                            <input type="radio" name="type" id="optionsRadios5" value="Volunteer" ng-model="vm.user.type"> Volunteer
+                                            <span></span>
+                                        </label>                                  
+                                    </div>
+                                </div>
+                            </div>
+
 
 
                            

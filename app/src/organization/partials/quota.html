@@ -13,30 +13,30 @@
 							<tbody>
 								<tr >
 									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 16px; padding: 5px 0px 3px 0px; border: none;'>
-										<strong>Name:</strong>
+										style='color: #404041; font-size: 16px; line-height: 16px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										<strong>Total Quota:</strong>
 									</td>
 									<td width='40%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
-										 {{vm.organization.plan}}</td>
-								</tr>	
-								<tr >
-									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 0px 3px 0px; border: none;'>
-										<strong>Quota:</strong>
-									</td>
-									<td width='40%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
 										 {{vm.organization.quota}}</td>
 								</tr>	
 								<tr >
 									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 0px 3px 0px; border: none;'>
-										<strong>Validity:</strong>
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										<strong>Quota Consumed:</strong>
 									</td>
 									<td width='40%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
-										 1 Year</td>
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										 {{vm.organization.quotaConsumed}}</td>
+								</tr>	
+								<tr >
+									<td align='left' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										<strong>Quota Expiry:</strong>
+									</td>
+									<td width='40%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										 {{vm.organization.expiry | date: 'dd MMM yyyy'}}</td>
 								</tr>
 											
 							</tbody>
@@ -51,30 +51,30 @@
 							<tbody>
 								<tr >
 									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 16px; padding: 5px 0px 3px 0px; border: none;'>
-										<strong>Consumed:</strong>
+										style='color: #404041; font-size: 16px; line-height: 16px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										<strong>Document Processed:</strong>
 									</td>
-									<td width='60%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
-										 {{vm.organization.quotaConsumed}}</td>
+									<td width='40%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										 {{vm.organization.docsProcessed}}</td>
 								</tr>	
 								<tr >
 									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 0px 3px 0px; border: none;'>
-										<strong>Start:</strong>
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										<strong>Last Quota Increased:</strong>
 									</td>
-									<td width='60%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
-										 {{vm.organization.start |  date: 'dd-MM-yyyy'}}</td>
+									<td width='40%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										 {{vm.organization.lastIncrease}}</td>
 								</tr>	
 								<tr >
 									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 0px 3px 0px; border: none;'>
-										<strong>Expiry:</strong>
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										<strong>Last Quota Update Date:</strong>
 									</td>
-									<td width='60%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 5px 5px 3px 5px; border: none;'>
-										 {{vm.organization.expiry |  date: 'dd-MM-yyyy'}}</td>
+									<td width='40%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										 {{vm.organization.updateDate |  date: 'dd MMM yyyy'}}</td>
 								</tr>
 											
 							</tbody>
@@ -85,12 +85,12 @@
 
 					<div class="clearfix"></div>
 
-					<div class="row">
+					<!-- <div class="row">
                         <div class="col-md-offset-3 col-md-9 text-right">
                             <button type="button" role="button" aria-lable="Change Plan" class="btn green" ng-click="vm.planEditMode = !vm.planEditMode">Change Plan</button> 
                             <button type="button" role="button" aria-lable="Add Quota" class="btn btn-info" ng-click="vm.planEditMode = !vm.planEditMode">Add Quota</button>                                  
                         </div>
-                    </div>
+                    </div> -->
 				</div>
 
 
