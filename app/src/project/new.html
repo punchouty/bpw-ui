@@ -47,15 +47,15 @@
                                             <div class="row">
                                                 <div class="col-md-offset-9 col-md-3 pull-right">
 
-                                                    <button  class="btn btn-success" ng-if="vm.currentStep > 1" ng-click="vm.gotoStep(vm.currentStep - 1)">
+                                                    <button  class="btn btn-success" ng-if="vm.currentStep > 1" ng-click="vm.gotoStep(vm.currentStep - 1)" role="button" aria-label="go back">
                                                         <i class="fa fa-angle-left"></i> Back </button>
 
-                                                    <button  class="btn btn-success" ng-if="vm.currentStep < (vm.steps.length)"  ng-click="vm.gotoStep(vm.currentStep + 1)"
+                                                    <button  class="btn btn-success" ng-if="vm.currentStep < (vm.steps.length)"  ng-click="vm.gotoStep(vm.currentStep + 1)" role="button" aria-label="continue"
                                                     ng-disabled="vm.check(vm.currentStep, vm.projectForm)"> Continue &nbsp;
                                                         <i class="fa fa-angle-right"></i>
                                                     </button>
 
-                                                    <button  class="btn btn-success" ng-if="(vm.currentStep == vm.steps.length)"  ng-click="vm.saveProject()"> Done
+                                                    <button  class="btn btn-success" ng-if="(vm.currentStep == vm.steps.length)"  ng-click="vm.saveProject()" role="button" aria-label="done"> Done
                                                         <i class="fa fa-check"></i>
                                                     </button>     
                                                     

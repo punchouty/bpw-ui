@@ -1,0 +1,17 @@
+[
+  {
+    "id": "5acb35c790c30b479a55f88e",
+    "index": 0,
+    "name": "Admin"
+  },
+  {
+    "id": "5acb35c73a5dd5dfff3ae8e3",
+    "index": 1,
+    "name": "Role A"   
+  },
+  {
+    "id": "5acb35c7ca44043df753db3a",
+    "index": 2,   
+    "name": "Role B"  
+  }
+]

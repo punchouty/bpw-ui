@@ -53,44 +53,44 @@
                controllerAs: 'vm'               
             }
         },
-        {
+         {
             state: 'app.users',
             config:  { 
                url: "/users",
-               templateUrl: "views/blank.html",            
+               templateUrl: "app/src/user/list.html",            
                data: {pageTitle: 'Users'},
-               controller: "BlankController",
-               resolve: {
-                   deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                       return $ocLazyLoad.load({
-                           name: 'MetronicApp',
-                           insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                           files: [
-                               'js/controllers/BlankController.js'
-                           ] 
-                       });
-                   }]
-               }
+               controller: "usersListCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+        {
+            state: 'app.newUser',
+            config:  { 
+               url: "/users/new",
+               templateUrl: "app/src/user/new.html",            
+               data: {pageTitle: 'Add User'},
+               controller: "userNewCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+         {
+            state: 'app.userView',
+            config:  { 
+               url: "/users/:id/view",
+               templateUrl: "app/src/user/view.html",            
+               data: {pageTitle: 'User View'},
+               controller: "userViewCtrl",
+               controllerAs: 'vm'               
             }
         },
         {
             state: 'app.roles',
             config:  { 
                url: "/roles",
-               templateUrl: "views/blank.html",            
+               templateUrl: "app/src/role/list.html",            
                data: {pageTitle: 'Roles'},
-               controller: "BlankController",
-               resolve: {
-                   deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                       return $ocLazyLoad.load({
-                           name: 'MetronicApp',
-                           insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                           files: [
-                               'js/controllers/BlankController.js'
-                           ] 
-                       });
-                   }]
-               }
+               controller: "roleCtrl",
+               controllerAs: 'vm'               
             }
         },
         {

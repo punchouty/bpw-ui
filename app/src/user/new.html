@@ -1,0 +1,151 @@
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <!-- <li>
+        <a ui-sref="dashboard">Blank Page</a>
+        <i class="fa fa-circle"></i>
+    </li> -->
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row" >
+    <div class="col-md-12">
+        <!-- BEGIN: ACCORDION DEMO -->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-green-sharp">
+                    <i class="icon-settings font-green-sharp"></i>
+                    <span class="caption-subject bold uppercase">New User</span>
+                    <span class="caption-helper hide"></span>
+                </div>
+                <div class="actions">
+                   <!--  <a class="btn btn-circle  green" href="#">
+                        <i class="fa fa-plus"></i> Add
+                    </a> -->
+                   <!--  <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                        <i class="icon-wrench"></i>
+                    </a> -->
+                   <!--   <a class="btn red btn-outline btn-circle" href="#" ng-click="vm.goBack()">  <i class="fa  fa-mail-reply"></i> Back </a> -->
+                </div>
+            </div>
+            <div class="portlet-body form"> 
+
+            		
+            	<div class="col-md-6 col-md-offset-2">
+                            <!-- BEGIN SAMPLE FORM PORTLET-->
+                    <form class="form-horizontal" role="form" name="vm.userForm" ng-submit="vm.onSubmit(vm.userForm)" >
+                        <div class="form-body">
+                           <div class="form-group" ng-class="{'has-error':vm.userForm.name.$dirty && vm.userForm.name.$invalid}">
+                                <label class="col-md-3 control-label">User</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-home"></i>
+                                        </span>
+                                        <input type="text" class="form-control" name="name" placeholder="Name" ng-model="vm.user.name" required="" aria-describedby="name"  > </div>
+                                </div>
+                            </div>  
+                            
+
+                             <div class="form-group" ng-class="{'has-error':vm.userForm.mobile.$dirty && vm.userForm.mobile.$invalid}">
+                                <label class="col-md-3 control-label">Mobile</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-phone"></i>
+                                        </span>                                            
+                                        <input id="mobile" class="form-control" type="text" name="mobile" placeholder="Mobile" ng-model="vm.user.mobile" ng-pattern="/^[789]\d{9}$/" maxlength="10" required aria-describedby="mobile" > 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{'has-error':vm.userForm.email.$dirty && vm.userForm.email.$invalid}">
+                                <label class="col-md-3 control-label">Email Address</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                        <input type="email" class="form-control" name="email" placeholder="Email Address" ng-model="vm.user.email" required aria-describedby="email" > </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{'has-error':vm.userForm.address.$dirty && vm.userForm.address.$invalid}">
+                                <label class="col-md-3 control-label">Address</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                         <span class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        <input type="text" name="address" class="form-control" placeholder="address" ng-model="vm.user.address" required="" aria-describedby="address"  >
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="form-group" ng-class="{'has-error':vm.userForm.role.$dirty && vm.userForm.role.$invalid}">
+                                <label class="col-md-3 control-label">Role</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" ng-model="vm.user.role"
+                                        ng-options="role for role in vm.roles" name="role" ng-change="vm.changerole(vm.user.role)" required aria-describedby="role" >   
+                                        <option value="">Select</option>                                    
+                                    </select>
+                                </div>
+                            </div>
+                          
+                           
+
+
+                           
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9 text-center">
+                                    <button type="submit" class="btn green" ng-disabled="vm.userForm.$invalid">Submit</button>
+                                    <button type="button" class="btn default" ng-click="vm.goBack()">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                                                        
+                </div>
+                <div class="clearfix"></div>
+
+
+        	</div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS-->
+<script>
+    // call any jquery or angularjs code ehre
+</script>
+<!-- BEGIN MAIN JS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

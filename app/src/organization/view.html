@@ -31,8 +31,8 @@
             <div class="portlet-body"> 
 
 
-                <uib-tabset active="active">
-                    <uib-tab index="0" heading="Basic Info">
+                <uib-tabset active="active" role="tablist">
+                    <uib-tab index="0" heading="Basic Info" role="tab">
                             <div ng-include="'app/src/organization/partials/basic_info.html'"></div>
                     </uib-tab>
 
@@ -44,11 +44,11 @@
                             <div ng-include="'app/src/organization/partials/resellers.html'"></div>
                     </uib-tab> -->
 
-                    <uib-tab index="3" heading="Users">
+                    <uib-tab index="3" heading="Users" role="tab">
                             <div ng-include="'app/src/organization/partials/users.html'"></div>
                     </uib-tab>
 
-                    <uib-tab index="4" heading="Change Log">
+                    <uib-tab index="4" heading="Change Log" role="tab">
                             <div ng-include="'app/src/organization/partials/change_logs.html'"></div>
                     </uib-tab>
                     <!-- <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" disable="tab.disabled">
