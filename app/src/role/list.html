@@ -19,9 +19,9 @@
                     <span class="caption-helper hide"></span>
                 </div>
                 <div class="actions">
-                    <a class="btn btn-circle  green" ng-click="vm.newRole()" role="link" aria-label="add user">
+                    <button class="btn btn-circle  green" ng-click="vm.newRole()" role="button" aria-label="add user">
                         <i class="fa fa-plus"></i> Add
-                    </a>
+                    </button>
                   
                 </div>
             </div>
@@ -37,29 +37,21 @@
 							</td>							
 												
 						
-							<td data-title="'Actions'" >
-								<div class="btn-group">
-									<button class="btn btn-xs green dropdown-toggle" type="button"
-										data-toggle="dropdown" aria-expanded="false">
-										Actions <i class="fa fa-angle-down"></i>
+							<td data-title="'Actions'" >								
+
+								<div class="btn-group btn-group-xs btn-group-solid button-margin-class">                                
+	                                                             
+	                                  
+                                    <button class="btn btn-xs btn-info no-margin" type="button"
+									 ng-click="vm.editRole(row)">
+										<i class="icon-pencil"></i> Edit
 									</button>
-									<ul class="dropdown-menu pull-right" role="menu">
-										<li><a ng-click="vm.editRole(row)"> <i
-												class="icon-pencil"></i> Edit
-										</a></li>
-									<!-- 	<li><a ui-sref="app.manufacturerDetailEdit({id : row.id})"> <i
-												class="icon-note"></i> Edit
-										</a></li>
-										<li ng-if="row.status == 'ACTIVE'"><a
-											ng-click="vm.disableManufacturer(row.id)" href="#"> <i
-												class="icon-ban"></i> Disable
-										</a></li>
-										<li ng-if="row.status == 'INACTIVE'"><a
-											ng-click="vm.enableManufacturer(row.id)" href="#"> <i
-												class="icon-check"></i> Enable
-										</a></li> -->
-									</ul>
-								</div>
+									<!-- <button class="btn btn-xs btn-default no-margin" type="button"
+									 ng-click="row.editMode = !row.editMode">
+											cancel
+									</button>    -->
+                              
+                                </div>
 							</td>
 							
 						</tr>
