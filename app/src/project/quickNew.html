@@ -1,0 +1,152 @@
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <!-- <li>
+        <a ui-sref="dashboard">Blank Page</a>
+        <i class="fa fa-circle"></i>
+    </li> -->
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row" >
+    <div class="col-md-12">
+        <!-- BEGIN: ACCORDION DEMO -->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-green-sharp">
+                    <i class="icon-settings font-green-sharp"></i>
+                    <span class="caption-subject bold uppercase">New Project</span>
+                    <span class="caption-helper hide"></span>
+                </div>
+                <div class="actions">
+                    <button class="btn red btn-outline btn-circle" ng-click="vm.goBack()">  <i class="fa  fa-mail-reply"></i> Back </button>
+                </div>
+            </div>
+            <div class="portlet-body form"> 
+
+            		
+            	<div class="col-md-6 col-md-offset-2">
+                            <!-- BEGIN SAMPLE FORM PORTLET-->
+                    <form class="form-horizontal" role="form" name="vm.projectForm" ng-submit="vm.saveProject(vm.projectForm)" >
+                        <div class="form-body">
+                               <div class="form-group" ng-class="{'has-error':vm.projectForm.name.$dirty && vm.projectForm.name.$invalid}">
+                                    <label class="col-md-4 control-label">Project Name</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-home"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="name" placeholder="Name" ng-model="vm.project.name" required="" aria-describedby="name"  > </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" ng-class="{'has-error':vm.projectForm.page.$dirty && vm.projectForm.page.$invalid}">
+                                    <label class="col-md-4 control-label">Page per Sub Project</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-clone"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="page" placeholder="page" ng-model="vm.project.page" required="" aria-describedby="page"  > </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" ng-class="{'has-error':vm.projectForm.compiler.$dirty && vm.projectForm.compiler.$invalid}">
+                                    <label class="col-md-4 control-label">Compiler</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                            <!-- <input type="text" class="form-control" name="compiler" placeholder="compiler" ng-model="vm.project.compiler" required="" aria-describedby="compiler"  > </div> -->
+                                            <input type="text" ng-model="vm.project.compiler"              
+                                            placeholder="compiler"
+                                            uib-typeahead="user as user.name for user in vm.getUsers($viewValue)"
+                                            typeahead-loading="loading" typeahead-no-results="noResults"
+                                            typeahead-min-length="3" typeahead-on-select="vm.onUserChange(vm.project.compiler)" class="form-control " required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" ng-if="vm.project.compiler.name">
+                                    <label class="col-md-4 control-label">Is Volunteer or Paid</label>
+                                    <div class="col-md-8">
+                                        <div class="mt-radio-inline" ng-init="vm.project.compiler.type = 'Volunteer'">
+                                            <label class="mt-radio">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="Volunteer" checked="" ng-model="vm.project.compiler.type"> Volunteer
+                                                <span></span>
+                                            </label>
+                                            <label class="mt-radio">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios5" value="Paid" ng-model="vm.project.compiler.type"> Paid
+                                                <span></span>
+                                            </label>                            
+                                        </div>
+                                    </div>
+                                </div>  
+
+                           
+                                <div class="form-group" ng-class="{'has-error':vm.projectForm.file.$dirty && vm.projectForm.file.$invalid}">
+                                    <label for="fileuplod" class="col-md-4 control-label">File input</label>
+                                    <div class="col-md-8">
+                                        <input type="file" id="fileuplod" name="file" ng-model="vm.project.file">
+                                    </div>
+                                </div>
+
+                                <br>
+
+                       
+                                <div ng-include="'app/src/project/partials/assignment.html'"></div>
+
+                           
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9 text-center">
+                                    <button type="submit" class="btn green" ng-disabled="vm.projectForm.$invalid">Submit</button>
+                                    <button type="button" class="btn default" ng-click="vm.goBack()">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                                                        
+                </div>
+                <div class="clearfix"></div>
+
+
+        	</div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS-->
+<script>
+    // call any jquery or angularjs code ehre   
+</script>
+<!-- BEGIN MAIN JS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

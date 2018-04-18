@@ -13,7 +13,7 @@
     "date": "2014-04-23T01:44:32",
     "expiry": "2019-01-23T01:44:32",
     "quota": 13245,
-    "actions": "New Reseller"
+    "actions": "Quota transfered"
   },
   {
     "id": "5acb35c73a5dd5dfff3ae8e3",
@@ -29,7 +29,7 @@
     "date": "2016-07-24T07:26:02",
     "expiry": "2019-02-23T01:44:32",
     "quota": 21312,
-    "actions": "Plan Changed"
+    "actions": "Quota increased"
   },
   {
     "id": "5acb35c7ca44043df753db3a",
@@ -45,7 +45,7 @@
     "date": "2015-07-30T10:11:40",
     "expiry": "2019-03-23T01:44:32",
     "quota": 1009,
-    "actions": "New Reseller"
+    "actions": "Quota transfered"
   },
   {
     "id": "5acb35c7886d29a492db2dd8",

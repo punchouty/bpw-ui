@@ -1,0 +1,46 @@
+[   {
+    "name": "Proof Reader 1",
+    "users": [{
+        "id": "5acb35c73a5dd5dfff3ae8e4",        
+        "name": "Jennifer Rosario",
+        "gender": "female",
+        "company": "XIXAN",
+        "email": "sario@xixan.com",
+        "mobile": "9111111111",
+        "type": "Paid"
+    
+    },{
+        "id": "5acb35c73a5dd5dfff3ae8e6",        
+        "name": "Steele Barr",
+        "gender": "male",
+        "company": "OBLIQ",
+        "email": "barr@obliq.com",
+        "mobile": "9111111112",
+        "type": "Volunteer"
+       
+    }]
+}, {
+
+    "name": "Proof Reader 2",
+    "users": [{
+            "id": "5acb35c73a5dd5dfff3ae8e5",        
+            "name": "John Doe",
+            "gender": "male",
+            "company": "Hello",
+            "email": "barr@obliq.com",
+            "mobile": "9111111113",
+            "type": "Paid"
+        
+    },{
+        "id": "5acb35c73a5dd5dfff3ae8e6",        
+        "name": "Steele Barr",
+        "gender": "male",
+        "company": "OBLIQ",
+        "email": "barr@obliq.com",
+        "mobile": "9111111112",
+        "type": "Volunteer"
+       
+    }]
+
+
+}]

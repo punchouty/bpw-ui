@@ -73,7 +73,7 @@
           .then(function(response) {  
                self.changeLogs = response.data;                 
                console.log(self.changeLogs);
-               pagination3();  
+               // pagination3();  
           },function() {
               logger.error("Something went wrong")       
           });            
@@ -222,6 +222,43 @@
       }
 
     }
+
+
+    self.onTransferQuota = function(form) {
+      if(form.$invalid) {
+        logger.error("Invalid details");
+      } else {
+
+        
+        swal({
+          title: 'Confirmation',
+          text: 'Are you sure?',
+          // html: '',
+          type: 'info',
+          allowOutsideClick: 'true',
+          showConfirmButton: 'true',
+          showCancelButton: 'true',
+          confirmButtonClass: 'color-view bg-green-jungle bg-font-green-jungle',
+          cancelButtonClass: 'cancel btn btn-lg btn-danger',
+          closeOnConfirm: true,
+          closeOnCancel: true,
+          // confirmButtonText: sa_confirmButtonText,
+          // cancelButtonText: sa_cancelButtonText,
+        },
+        function(isConfirm){
+              if (isConfirm){         
+                logger.success("Quota transfered successfully");
+              }
+              else {
+            
+              }
+        });
+
+      
+        
+      }
+
+    }
   
 
     self.goBack = function() {
@@ -250,7 +287,23 @@
         });
           
     }
+
+    self.getOrganizations = function(query) {
+       return organizationFactory.getOrganizations()
+          .then(function(response) {  
+              return response.data;   
+          },function() {
+              logger.error("Something went wrong")       
+          });
+
+    }
+
+    self.incrementQuota = function() {
+      console.log(self.increment);
+      logger.success("quota incremented");
+    }
   
+
    
   
   }

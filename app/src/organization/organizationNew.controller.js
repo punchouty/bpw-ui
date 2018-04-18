@@ -50,6 +50,7 @@
         logger.error("Invalid details");
       } else {
         logger.success("organization submitted successfully");
+        $state.go("app.organizationView", {id: '4efr64g6334433gf'});
       }
 
     }
@@ -60,27 +61,21 @@
       $window.history.back();
     }
 
-    self.initDatepicker = function() {     
-        $('#start').datepicker({
-            rtl: App.isRTL(),
-            orientation: "left",
-            autoclose: true
-        }).on('changeDate', function(e) {
-            self.organization.start = e.date;
-        });
+    // self.initDatepicker = function() {     
+    //     $('#start').datepicker({
+    //     }).on('changeDate', function(e) {
+    //         self.organization.start = e.date;
+    //     });
           
-    }
+    // }
 
-    self.initDatepicker2 = function() {     
-        $('#expiry').datepicker({
-            rtl: App.isRTL(),
-            orientation: "left",
-            autoclose: true
-        }).on('changeDate', function(e) {
-            self.organization.expiry = e.date;
-        });
+    // self.initDatepicker2 = function() {     
+    //     $('#expiry').datepicker({
+    //     }).on('changeDate', function(e) {
+    //         self.organization.expiry = e.date;
+    //     });
           
-    }
+    // }
  
   
 

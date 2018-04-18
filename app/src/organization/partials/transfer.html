@@ -7,22 +7,27 @@
 
 					<div class="col-md-6 col-md-offset-2">
                             <!-- BEGIN SAMPLE FORM PORTLET-->
-	                    <form class="form-horizontal" role="form" name="vm.quotaForm" ng-submit="vm.onSubmit(vm.quotaForm)" >
+	                    <form class="form-horizontal" role="form" name="vm.quotaForm" ng-submit="vm.onTransferQuota(vm.quotaForm)" >
 
 
 	                        <div class="form-body">                           
 
 	                            <div class="form-group" ng-class="{'has-error':vm.quotaForm.organization.$dirty && vm.quotaForm.organization.$invalid}">
-	                                <label class="col-md-3 control-label">Organization</label>
+	                                <label class="col-md-3 control-label">Beneficiary Organization</label>
 	                                <div class="col-md-9">
-	                                    <div class="input-group">
+	                                    <div class="">
 	                                        <div class="input-icon">
 	                                            <i class="fa fa-search"></i>
-	                                            <input id="organization" class="form-control" type="text" name="organization" placeholder="Organization" ng-model="vm.quota.organization"> </div>
-	                                        <span class="input-group-btn">
-	                                            <button id="search" class="btn btn-success" type="button" ng-click="vm.searchOrg(vm.quota.organization)" role="button" aria-label="search with organization">
-	                                                <i class="fa fa-arrow-left fa-fw"></i> Search</button>
-	                                        </span>
+
+	                                            <input type="text" id="organization" ng-model="vm.quota.organization"              
+					                                placeholder="add organization"
+					                                uib-typeahead="org as org.name for org in vm.getOrganizations($viewValue)"
+					                                typeahead-loading="loading" typeahead-no-results="noResults"
+					                                typeahead-min-length="3" typeahead-on-select="vm.onOrganizationChange(vm.increment.org)" class="form-control" required="">
+	                                        
+
+	                                        </div>
+	                                        
 	                                    </div>
 	                                </div>
 	                            </div>

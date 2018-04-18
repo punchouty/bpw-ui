@@ -27,6 +27,16 @@
 			return promise;
 		};
 
+		service.getReaders = function() {
+			var promise = $http.get("data/readers.json")
+					.then(function(data) {
+						return data;
+					}, function(errors) {
+						return errors;
+					});
+			return promise;
+		};
+
 		service.getProjectById = function(projectId) {
 			var promise = $http.get("data/project.json")
 					.then(function(data) {

@@ -14,30 +14,31 @@
 								<tr >
 									<td align='left' valign='top'
 										style='color: #404041; font-size: 16px; line-height: 16px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										<strong>Total Quota:</strong>
+										<strong>Pages Available:</strong>
 									</td>
 									<td width='40%' align='right' valign='top'
 										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
 										 {{vm.organization.quota}}</td>
-								</tr>	
+								</tr>									
 								<tr >
 									<td align='left' valign='top'
 										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										<strong>Quota Consumed:</strong>
-									</td>
-									<td width='40%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										 {{vm.organization.quotaConsumed}}</td>
-								</tr>	
-								<tr >
-									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										<strong>Quota Expiry:</strong>
+										<strong>Date of Expiry:</strong>
 									</td>
 									<td width='40%' align='right' valign='top'
 										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
 										 {{vm.organization.expiry | date: 'dd MMM yyyy'}}</td>
 								</tr>
+
+								<tr >
+									<td align='left' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										<strong>Total Pages in Plan:</strong>
+									</td>
+									<td width='40%' align='right' valign='top'
+										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+										 {{vm.organization.quotaConsumed}}</td>
+								</tr>	
 											
 							</tbody>
 						</table>
@@ -46,39 +47,29 @@
 					</div>
 
 					<div class="col-xs-4 col-xs-offset-2">
-						<table class="table" width='0' border='0' align='right'
-							cellpadding='0' cellspacing='0'>
-							<tbody>
-								<tr >
-									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 16px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										<strong>Document Processed:</strong>
-									</td>
-									<td width='40%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										 {{vm.organization.docsProcessed}}</td>
-								</tr>	
-								<tr >
-									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										<strong>Last Quota Increased:</strong>
-									</td>
-									<td width='40%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										 {{vm.organization.lastIncrease}}</td>
-								</tr>	
-								<tr >
-									<td align='left' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										<strong>Last Quota Update Date:</strong>
-									</td>
-									<td width='40%' align='right' valign='top'
-										style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-										 {{vm.organization.updateDate |  date: 'dd MMM yyyy'}}</td>
-								</tr>
-											
-							</tbody>
-						</table>
+						 <form class="form-horizontal" role="form" name="vm.organizationForm" ng-submit="vm.incrementQuota(vm.organizationForm)" >
+						 	<div class="form-body">			                  
+
+			                    <div class="form-group" ng-class="{'has-error':vm.organizationForm.quota.$dirty && vm.organizationForm.quota.$invalid}">
+			                        <label class="" for="quota">Increase Quota  </label>
+			                        <br>
+			                        <div class="">
+										<input type="text" id="quota" ng-model="vm.increment.quota"              
+			                                placeholder="quota" name="quota" 
+			                                class="form-control" required="">
+			                        </div>        
+			                    </div>
+            				</div>               
+	                         <div class="form-actions">
+	                            <div class="row">
+	                                <div class="col-md-offset-3 col-md-9 text-right">
+	                                    <button type="submit" class="btn green" ng-disabled="vm.organizationForm.$invalid">Add</button>	
+	                                </div>
+	                            </div>
+	                        </div>       
+
+	                      </form>
+						
 						<br />
 						
 					</div>

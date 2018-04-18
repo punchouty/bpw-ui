@@ -32,7 +32,8 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href="assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css"> -->
+        <link rel="stylesheet" type="text/css" href="assets/accessible/ab-datepicker/css/datepicker.css">
         <link href="assets/global/plugins/jquery-file-upload/css/jquery.fileupload.css"  rel="stylesheet" type="text/css" />
         <link href="assets/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css"  rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
@@ -52,6 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="assets/layouts/layout4/css/themes/light.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="assets/pages/css/login-2.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css" /> 
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <!-- END THEME STYLES -->
         <link rel="shortcut icon" href="favicon.ico" /> </head>
@@ -67,7 +69,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
     <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
 
-    <body ng-controller="AppController" class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo page-on-load" ng-class="{'page-sidebar-closed': settings.layout.pageSidebarClosed, 'page-header-fixed': !fullPage, 'login': fullPage}">
+    <body ng-controller="AppController" class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo page-on-load" ng-class="{'page-sidebar-closed': settings.layout.pageSidebarClosed, 'page-header-fixed': !fullPage, 'login': fullPage}" role="body">
         <!-- BEGIN PAGE SPINNER -->
         <div ng-spinner-bar class="page-spinner-bar">
             <div class="bounce1"></div>
@@ -113,7 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="assets/borrowed/ngStorage.js"></script>
         <script src="assets/global/plugins/ng-table/ng-table.js"></script>
         <script src="assets/borrowed/sortable.js"></script>
-
+        <script src="assets/global/plugins/bootstrap-sweetalert/sweetalert.js" type="text/javascript"></script>
         <!-- END CORE ANGULARJS PLUGINS -->
         <!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
        
@@ -179,8 +181,10 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="app/src/organization/organization.service.js" type="text/javascript"></script>
 
         <script src="app/src/project/projectsList.controller.js" type="text/javascript"></script>
-        <script src="app/src/project/subProjectList.controller.js" type="text/javascript"></script>
+        <!-- <script src="app/src/project/subProjectList.controller.js" type="text/javascript"></script> -->
         <script src="app/src/project/subProjectView.controller.js" type="text/javascript"></script>
+        <script src="app/src/project/projectView.controller.js" type="text/javascript"></script>
+        <script src="app/src/project/quickNew.controller.js" type="text/javascript"></script>
         <script src="app/src/project/project.controller.js" type="text/javascript"></script>
         <script src="app/src/project/project.service.js" type="text/javascript"></script>
 
@@ -199,8 +203,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
         <script src="assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
         <script src="assets/layouts/layout4/scripts/demo.min.js" type="text/javascript"></script>
-        <script src="assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-        <script src="assets/pages/scripts/components-date-time-pickers.min.js" type="text/javascript"></script> <!-- END APP LEVEL JQUERY SCRIPTS -->
+        <script src="assets/accessible/ab-datepicker/js/locales/en.min.js" type="text/javascript"></script>
+        <script src="assets/accessible/ab-datepicker/js/datepicker.min.js" type="text/javascript"></script>
+       <!--  <script src="assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+        <script src="assets/pages/scripts/components-date-time-pickers.min.js" type="text/javascript"></script>  -->
+        <!-- END APP LEVEL JQUERY SCRIPTS -->
 
 
         

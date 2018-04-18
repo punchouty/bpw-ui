@@ -5,63 +5,42 @@
     		<div class="portlet-body">
 
 
-    			<table
-						class="table table-striped table-bordered table-hover"
-						ng-table="vm.tableParams3" show-filter="true" >
-						<tr class="odd gradeX" ng-repeat="row in $data">
-							<td data-title="'Actions'" sortable="'actions'">
-								{{ row.actions }}
-							</td>
-							<td data-title="'Date'">
+    			<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<th>Date</th>
+						<th>Changes</th>						
+						<th>Available Pages</th>
+						<th>Benificary Organization</th>
+						<th>Quota Expiry</th>
+						<th>Actions</th>
+
+					</thead>	
+					<tbody>
+						<tr class="odd gradeX" ng-repeat="row in vm.changeLogs">
+							
+							<td>
 								{{ row.date |  date: 'dd-MM-yyyy'  }}
 							</td>
-							<td data-title="'Changes'">
+							<td>
 								{{ row.changes }}
-							</td>							
-							<td data-title="'Organization'">
+							</td>	
+							<td>
+								{{row.quota}}
+							</td>						
+							<td>
 								{{ row.organization }}
-							</td>							
-							<td data-title="'Total Quota'"
-								>{{row.quota}}
 							</td>
-							<td data-title="'Quota Expiry'">
+							<td>
 								{{ row.date |  date: 'dd-MM-yyyy' }}
 							</td>
-							
-							
-							
-							<!-- <td data-title="'Status'">
-								<span ng-if="row.status=='Active'"
-								class="label label-sm label-info">Active</span>
-								<span ng-if="row.status=='Deactivated'"
-								class="label label-sm label-danger">Deactivated</span>
-								<span ng-if="row.status=='Quota Consumed'"
-								class="label label-sm label-success">Quota Consumed</span>
-							</td> -->
-							<!-- <td data-title="'Actions'">
-								<div class="btn-group pull-right">
-									<button class="btn btn-xs green dropdown-toggle" type="button"
-										data-toggle="dropdown" aria-expanded="false">
-										Actions <i class="fa fa-angle-down"></i>
-									</button>
-									<ul class="dropdown-menu pull-right" role="menu">	
-									
-										<li ng-if="row.status == 'Active'"><a
-											ng-click="row.status = 'Deactivated'" href="#"> <i
-												class="icon-ban"></i> Disable
-										</a></li>
-										<li ng-if="row.status == 'Deactivated'"><a
-											ng-click="row.status = 'Active'" href="#"> <i
-												class="icon-check"></i> Enable
-										</a></li> 
-									</ul>
-								</div>
-							</td> -->
-							
+							<td >
+								{{ row.actions }}
+							</td>
 						</tr>
-					</table>
+					</tbody>	
+				</table>
 
-					<div class="clearfix"></div>
+				<div class="clearfix"></div>
 
 
 

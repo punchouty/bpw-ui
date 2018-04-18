@@ -11,17 +11,9 @@
                                     <span class="step-title"> Step {{vm.currentStep}} of {{vm.steps.length}} </span>
                                 </span>
                             </div>
-                            <!-- <div class="actions">
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="icon-cloud-upload"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="icon-wrench"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="icon-trash"></i>
-                                </a>
-                            </div> -->
+                            <div class="actions">
+                               <button class="btn red btn-outline btn-circle" ng-click="vm.goBack()">  <i class="fa  fa-mail-reply"></i> Back </button>
+                            </div>
                         </div>
                         <div class="portlet-body form">
                             <div class="form-horizontal" >
@@ -30,7 +22,7 @@
 
                                         <div class="form-body">
                                             <ul class="nav nav-pills nav-justified steps">
-                                                <li ng-repeat="step in vm.steps" ng-class="{'active':step.step == vm.currentStep, 'done': step.step < vm.currentStep}"><a  class="step" href="javascript:;"><span class="number"> {{step.step}} </span>  <span class="desc"><i class="fa fa-check"></i>{{step.name}}</span></a> </li>                   
+                                                <li ng-repeat="step in vm.steps" ng-class="{'active':step.step == vm.currentStep, 'done': step.step < vm.currentStep}"><h2  class="step" href="javascript:;"><span class="number"> {{step.step}} </span>  <span class="desc"><i class="fa fa-check"></i>{{step.name}}</span></h2> </li>                   
                                             </ul>
                                             <div id="bar" class="progress progress-striped" role="progressbar">
                                                 <div class="progress-bar progress-bar-success" ng-style="{ 'width': vm.getProgress() + '%' }"> </div>

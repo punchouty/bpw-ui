@@ -16,3 +16,59 @@
   text-align: left;
   vertical-align: middle;
 }
+
+Bootstrap Wizard
+***/
+.form-wizard .progress {
+  margin-bottom: 30px; }
+
+.form-wizard .steps {
+  padding: 10px 0;
+  margin-bottom: 15px;
+  background-color: #fff;
+  background-image: none;
+  filter: none;
+  border: 0px;
+  box-shadow: none; }
+  .form-wizard .steps > li > h2.step {
+    background-color: #fff;
+    background-image: none;
+    filter: none;
+    border: 0px;
+    box-shadow: none; }
+    .form-wizard .steps > li > h2.step:hover {
+      background: none; }
+    .form-wizard .steps > li > h2.step > .number {
+      background-color: #eee;
+      display: inline-block;
+      text-align: center !important;
+      font-size: 16px;
+      font-weight: 300;
+      padding: 11px 15px 13px 15px;
+      margin-right: 10px;
+      height: 45px;
+      width: 45px;
+      -webkit-border-radius: 50% !important;
+      -moz-border-radius: 50% !important;
+      border-radius: 50% !important; }
+    .form-wizard .steps > li > h2.step > .desc {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 300; }
+      .form-wizard .steps > li > h2.step > .desc > i {
+        display: none; }
+  .form-wizard .steps > li.active > h2.step .number {
+    background-color: #36c6d3;
+    color: #fff; }
+  .form-wizard .steps > li.active > h2.step .desc {
+    color: #333; }
+  .form-wizard .steps > li.done > h2.step .number {
+    background-color: #F1C40F;
+    color: #fff; }
+  .form-wizard .steps > li.done > h2.step .desc {
+    color: #333; }
+    .form-wizard .steps > li.done > h2.step .desc i {
+      font-size: 12px;
+      font-weight: normal;
+      color: #999;
+      display: inline-block; }

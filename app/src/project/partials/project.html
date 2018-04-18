@@ -30,6 +30,39 @@
                         </div>
                     </div>
 
+                    <div class="form-group" ng-class="{'has-error':vm.projectForm.compiler.$dirty && vm.projectForm.compiler.$invalid}">
+                        <label class="col-md-4 control-label">Compiler</label>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <!-- <input type="text" class="form-control" name="compiler" placeholder="compiler" ng-model="vm.project.compiler" required="" aria-describedby="compiler"  > </div> -->
+                                <input type="text" ng-model="vm.project.compiler"              
+                                placeholder="compiler"
+                                uib-typeahead="user as user.name for user in vm.getUsers($viewValue)"
+                                typeahead-loading="loading" typeahead-no-results="noResults"
+                                typeahead-min-length="3" typeahead-on-select="vm.onUserChange(vm.project.compiler)" class="form-control " required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-if="vm.project.compiler.name">
+                        <label class="col-md-4 control-label">Is Volunteer or Paid</label>
+                        <div class="col-md-8">
+                            <div class="mt-radio-inline" ng-init="vm.project.compiler.type = 'Volunteer'">
+                                <label class="mt-radio">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios4" value="Volunteer" checked="" ng-model="vm.project.compiler.type"> Volunteer
+                                    <span></span>
+                                </label>
+                                <label class="mt-radio">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios5" value="Paid" ng-model="vm.project.compiler.type"> Paid
+                                    <span></span>
+                                </label>                            
+                            </div>
+                        </div>
+                    </div>        
+
                 </div>   
                  
             </fieldset>

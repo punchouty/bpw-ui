@@ -7,9 +7,11 @@
     "url": "http://www.abc.com/harry-potter",
     "date": "2015-06-26T11:34:00",
     "createdBy": "Vodemont",
+    "compiler": "Jennifer Rosario",
+    "status": "Complete",
      "subProjects":[{
         "id": "5acb35c73a5dd5dfff3ae8e4",
-            "name": "4.1",
+            "name": "P-1-10",
             "url": "http://www.abc.com/harry-potter/4-1",
             "user":{
                 "name": "Jennifer Rosario",
@@ -24,7 +26,7 @@
             "words": 5467
         },{
             "id": "5acb35c73a5dd5dfff3ae8e6",
-            "name": "4.2",
+            "name": "P-10-20",
             "url": "http://www.abc.com/harry-potter/4-2",
             "user":{
                 "name": "Steele Barr",
@@ -39,7 +41,7 @@
             "words": 4578
         },{
             "id": "5acb35c73a5dd5dfff3ae8e5",
-            "name": "4.3",
+            "name": "P-20-30",
             "url": "http://www.abc.com/harry-potter/4-3",
             "user":{
                 "name": "John Doe",
@@ -63,9 +65,11 @@
     "url": "http://www.abc.com/lord-of-rings",
     "date": "2016-08-21T11:34:00",
     "createdBy": "Sauron",
+    "compiler": "Steele Barr",
+    "status": "In Progress",
      "subProjects":[{
         "id": "5acb35c73a5dd5dfff3ae8e4",
-            "name": "4.1",
+            "name": "P-1-10",
             "url": "http://www.abc.com/lord-of-rings/4-1",
             "user":{
                 "name": "Jennifer Rosario",
@@ -80,7 +84,7 @@
             "words": 5467
         },{
             "id": "5acb35c73a5dd5dfff3ae8e6",
-            "name": "4.2",
+            "name": "P-10-20",
             "url": "http://www.abc.com/lord-of-rings/4-2",
             "user":{
                 "name": "Steele Barr",

@@ -19,43 +19,44 @@
                     <span class="caption-helper hide"></span>
                 </div>
                 <div class="actions">
-                   <!--  <a class="btn btn-circle  green" href="#">
-                        <i class="fa fa-plus"></i> Add
-                    </a> -->
-                   <!--  <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                        <i class="icon-wrench"></i>
-                    </a> -->
                      <a class="btn red btn-outline btn-circle" href="#" ng-click="vm.goBack()">  <i class="fa  fa-mail-reply"></i> Back </a>
                 </div>
             </div>
-            <div class="portlet-body"> 
+            <div class="portlet-body">  
 
 
-                <uib-tabset active="active" role="tablist">
-                    <uib-tab index="0" heading="Basic Info" role="tab">
-                            <div ng-include="'app/src/organization/partials/basic_info.html'"></div>
-                    </uib-tab>
 
-                    <uib-tab index="1" heading="Quota">
-                            <div ng-include="'app/src/organization/partials/quota.html'"></div>
-                    </uib-tab>
+                    <div id="myTab">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="tab active">
+                          <a id="tab1" href="" data-target="#basic_info" role="tab" aria-controls="basic_info" aria-selected="true" data-toggle="tab" tabindex="0">Basic Info</a>
+                        </li>
+                        <li class="tab">
+                          <a id="tab2" href="" data-target="#quota" role="tab" aria-controls="quota" aria-selected="false" data-toggle="tab" tabindex="-1">Quota</a>
+                        </li>
+                        <li class="tab">
+                          <a id="tab3" href="" data-target="#quota_transfer" role="tab" aria-controls="quota_transfer" aria-selected="false" data-toggle="tab" tabindex="-1">Quota Transfer</a>
+                        </li>
+                        <li class="tab">
+                          <a id="tab4" href="" data-target="#change_log" role="tab" aria-controls="change_log" aria-selected="false" data-toggle="tab" tabindex="-1">Change Log</a>
+                        </li>
+                      </ul>
 
-                   <!--  <uib-tab index="2" heading="Resellers">
-                            <div ng-include="'app/src/organization/partials/resellers.html'"></div>
-                    </uib-tab> -->
-
-                   <!--  <uib-tab index="3" heading="Users" role="tab">
-                            <div ng-include="'app/src/organization/partials/users.html'"></div>
-                    </uib-tab> -->
-
-                    <uib-tab index="2" heading="Quota Transfer" role="tab">
-                            <div ng-include="'app/src/organization/partials/transfer.html'"></div>
-                    </uib-tab>  
-
-                    <uib-tab index="3" heading="Change Log" role="tab">
-                            <div ng-include="'app/src/organization/partials/change_logs.html'"></div>
-                    </uib-tab>                   
-                  </uib-tabset>
+                      <div id="myTabContent" class="tab-content" aria-live="polite">
+                        <div class="tab-pane fade in active" id="basic_info" role="tabpanel" aria-labelledby="tab1" aria-hidden="false" tabindex="0">
+                          <div ng-include="'app/src/organization/partials/basic_info.html'"></div>
+                        </div>
+                        <div class="tab-pane fade" id="quota" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" tabindex="0">
+                          <div ng-include="'app/src/organization/partials/quota.html'"></div>
+                        </div>
+                        <div class="tab-pane fade" id="quota_transfer" role="tabpanel" aria-labelledby="tab3" aria-hidden="true" tabindex="0">
+                          <div ng-include="'app/src/organization/partials/transfer.html'"></div>
+                        </div>
+                        <div class="tab-pane fade" id="change_log" role="tabpanel" aria-labelledby="tab4" aria-hidden="true" tabindex="0">
+                          <div ng-include="'app/src/organization/partials/change_logs.html'"></div>
+                        </div>
+                      </div>
+                    </div>
             		
             	
                 <div class="clearfix"></div>

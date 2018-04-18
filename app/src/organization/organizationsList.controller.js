@@ -24,7 +24,7 @@
           .then(function(response) {  
                self.master = response.data;                 
                console.log(self.master);
-               pagination();  
+               // pagination();  
           },function() {
               logger.error("Something went wrong")       
           });
@@ -100,6 +100,10 @@
             
               }
         });
+    }
+
+    self.goToNew = function() {
+      $state.go('app.newOrganization');
     }
   
 

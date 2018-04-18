@@ -5,9 +5,9 @@
     .module('app')
     .controller('projectCtrl', projectCtrl);
 
-  projectCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter', '$uibModal' , 'projectFactory' , '$rootScope', 'Upload' ];
+  projectCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter', '$uibModal' , 'projectFactory' , '$rootScope', 'Upload', '$window' ];
   /* @ngInject */
-  function projectCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , $uibModal, projectFactory , $rootScope, Upload) {
+  function projectCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , $uibModal, projectFactory , $rootScope, Upload, $window) {
 
     var self = this;
 
@@ -191,16 +191,24 @@
               logger.error("Something went wrong")       
           });
 
+      projectFactory.getReaders()
+          .then(function(response) {  
+               self.readers = response.data;                 
+               console.log(self.readers);                
+          },function() {
+              logger.error("Something went wrong")       
+          });    
+
       
     }
 
     self.saveProject = function() {
-      $state.go('app.projects');
+      $state.go('app.projectView', {id: '345dfg34435d3'});
       logger.info("Done");
     }
 
-    self.selectUser = function(subject) {
-      self.selectedSubject = subject;
+    self.selectUser = function(reader) {
+      self.selectedReader = reader;
          var modalInstance = $uibModal.open({
             animation : self.animationsEnabled,           
             templateUrl : 'app/src/project/partials/user.html',
@@ -211,23 +219,37 @@
 
     }
 
-    self.updateUser = function(subject, user) {
-      console.log(subject, user);
-        subject.user = user;
+    self.updateUser = function(reader, user) {
+      console.log(reader, user);
+        reader.users.push(user);
     }
+
+    self.getUsers = function(phrase) {
+          console.log(phrase, self.users)
+
+         var returnData = _.filter(self.users, function(o) { 
+                    return o.name.includes(phrase); 
+                 });
+
+         console.log(returnData);
+         return self.users;
+          // self.users;
+        }
   
 
     ModalInstanceCtrl.$inject = [ '$uibModalInstance' ];
 
       function ModalInstanceCtrl($uibModalInstance) {
         var $ctrl = this;
-        $ctrl.subject = self.selectedSubject;
+        $ctrl.reader = self.selectedReader;
+        $ctrl.selectedRederType = 'Volunteer';
         $ctrl.users = self.users;
        
         $ctrl.ok = function(form, action) {   
           if (action == "AssignUser") {
-            self.updateUser($ctrl.subject,$ctrl.subjectUser);
-            console.log($ctrl.subjectUser);
+            $ctrl.selectedReader.type = $ctrl.selectedRederType;
+            self.updateUser($ctrl.reader, $ctrl.selectedReader);
+            console.log($ctrl.selectedReader);
             //$uibModalInstance.close();
           }         
           $uibModalInstance.close();         
@@ -237,22 +259,15 @@
           $uibModalInstance.dismiss('cancel');
         }; 
 
-        $ctrl.getUsers= function(phrase) {
-          console.log(phrase, $ctrl.users)
-
-         var returnData = _.filter($ctrl.users, function(o) { 
-                    return o.name.includes(phrase); 
-                 });
-
-         console.log(returnData);
-         return $ctrl.users;
-          // self.users;
-        }
-      
+        $ctrl.getUsers = self.getUsers;
+       
       }
   
   
-   
+    self.goBack = function() {
+      // $window.history.go(-2);
+      $window.history.back();
+    }
   
   }
 

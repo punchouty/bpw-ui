@@ -24,7 +24,7 @@
           .then(function(response) {  
                self.master = response.data;                 
                console.log(self.master);
-               pagination();  
+               // pagination();  
           },function() {
               logger.error("Something went wrong")       
           });
@@ -101,8 +101,14 @@
               }
         });
     }
-  
 
+    self.newProject = function() {
+      $state.go('app.newProject');
+    }
+  
+    self.projectView = function(row) {
+      $state.go('app.projectView',{id: row.id});
+    }
   
    
   

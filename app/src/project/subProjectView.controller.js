@@ -5,9 +5,9 @@
     .module('app')
     .controller('subProjectViewCtrl', subProjectViewCtrl);
 
-  subProjectViewCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'projectFactory' , '$rootScope', '$window' ];
+  subProjectViewCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'projectFactory', '$uibModal' , '$rootScope', '$window' ];
   /* @ngInject */
-  function subProjectViewCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , projectFactory , $rootScope, $window ) {
+  function subProjectViewCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , projectFactory, $uibModal , $rootScope, $window ) {
 
     var self = this;
 
@@ -108,6 +108,8 @@
       // $window.history.go(-2);
       $window.history.back();
     }
+
+   
    
   
   }

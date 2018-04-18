@@ -64,12 +64,22 @@
             }
         },
          {
+            state: 'app.newQuickProject',
+            config:  { 
+               url: "/projects/quicknew",
+               templateUrl: "app/src/project/quickNew.html",            
+               data: {pageTitle: 'New Project'},
+               controller: "quickNewProjectCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+         {
             state: 'app.projectView',
             config:  { 
                url: "/projects/:id/view",
-               templateUrl: "app/src/project/subList.html",            
-               data: {pageTitle: 'Project'},
-               controller: "subProjectListCtrl",
+               templateUrl: "app/src/project/view.html",            
+               data: {pageTitle: 'Project Details'},
+               controller: "projectViewCtrl",
                controllerAs: 'vm'               
             }
         },

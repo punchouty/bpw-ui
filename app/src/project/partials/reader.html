@@ -1,0 +1,33 @@
+      <div class="modal-header">
+            <h3 class="modal-title">Select User: </h3>
+        </div>
+        <div class="modal-body">
+			<div class="form-group">
+                <label>Select Reader</label>
+                  <input type="text" ng-model="$ctrl.proofReader"              
+                                placeholder="Assign Proof Reader"
+                                uib-typeahead="user as user.name for user in $ctrl.getUsers($viewValue)"
+                                typeahead-loading="loading" typeahead-no-results="noResults"
+                                typeahead-min-length="3" typeahead-on-select="vm.onUserChange($ctrl.proofReader)" class="form-control " maxlength="10">
+
+                  </div>     
+
+                  <div class="form-group" ng-show="$ctrl.proofReader.name">
+                        <label>Is Volunteer or Paid</label>
+                        <div class="mt-radio-inline">
+                            <label class="mt-radio">
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="Volunteer" checked="" ng-model="$ctrl.proofReader.type"> Volunteer
+                                <span></span>
+                            </label>
+                            <label class="mt-radio">
+                                <input type="radio" name="optionsRadios" id="optionsRadios5" value="Paid" ng-model="$ctrl.proofReader.type"> Paid
+                                <span></span>
+                            </label>                            
+                        </div>
+                    </div>              
+                      
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn  green-jungle" ng-click="$ctrl.ok('','AssignReader')">Ok</button>
+        </div>
