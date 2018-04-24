@@ -28,59 +28,59 @@
 
                     <div id="myTab">
                       <ul class="nav nav-tabs" role="tablist">
-                        <li class="tab active">
-                          <a id="tab1" href="" data-target="#basic_info" role="tab" aria-controls="basic_info" aria-selected="true" data-toggle="tab" tabindex="0">Basic Info</a>
+                        <li class="tab active" role="presentation">
+                          <a id="tab1" href="" data-target="#basic_info" role="tab" aria-controls="basic_info" aria-selected="true" data-toggle="tab" >Basic Info</a>
                         </li>
-                        <li class="tab">
-                          <a id="tab2" href="" data-target="#sub_projects" role="tab" aria-controls="sub_projects" aria-selected="false" data-toggle="tab" tabindex="-1">Sub Projects</a>
+                        <li class="tab" role="presentation">
+                          <a id="tab2" href="" data-target="#sub_projects" role="tab" aria-controls="sub_projects" aria-selected="false" data-toggle="tab" >Sub Projects</a>
                         </li>                        
                       </ul>
 
                       <div id="myTabContent" class="tab-content" aria-live="polite">
-                        <div class="tab-pane fade in active" id="basic_info" role="tabpanel" aria-labelledby="tab1" aria-hidden="false" tabindex="0">
+                        <div class="tab-pane fade in active" id="basic_info" role="tabpanel" aria-labelledby="tab1" aria-hidden="false" >
                           
-                          <br>
-                          <div id="info" class="row">
+                            <br>
+                            <div id="info" class="row">
 
-                            <div class="col-xs-4">
-                            <table class="table" width='0' border='0' align='right'
-                              cellpadding='0' cellspacing='0'>
-                              <tbody>
-                                <tr >
-                                  <td align='left' valign='top'
-                                    style='color: #404041; font-size: 16px; line-height: 16px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-                                    <strong>Project Name:</strong>
-                                  </td>
-                                  <td width='40%' align='right' valign='top'
-                                    style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-                                     {{vm.project.name}}</td>
-                                </tr> 
-                                <tr >
-                                  <td align='left' valign='top'
-                                    style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-                                    <strong>Compiler:</strong>
-                                  </td>
-                                  <td width='40%' align='right' valign='top'
-                                    style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-                                     {{vm.project.createdBy}}</td>
-                                </tr> 
-                                <tr >
-                                  <td align='left' valign='top'
-                                    style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-                                    <strong>Total Pages:</strong>
-                                  </td>
-                                  <td width='40%' align='right' valign='top'
-                                    style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
-                                     {{vm.project.pages}}</td>
-                                </tr>                                 
-                              </tbody>
-                            </table>
-                            <br />
-                           
+                              <div class="col-xs-4">
+                                <table class="table" width='0' border='0' align='right'
+                                  cellpadding='0' cellspacing='0'>
+                                  <tbody>
+                                    <tr >
+                                      <td align='left' valign='top'
+                                        style='color: #404041; font-size: 16px; line-height: 16px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+                                        <strong>Project Name:</strong>
+                                      </td>
+                                      <td width='40%' align='right' valign='top'
+                                        style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+                                         {{vm.project.name}}</td>
+                                    </tr> 
+                                    <tr >
+                                      <td align='left' valign='top'
+                                        style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+                                        <strong>Compiler:</strong>
+                                      </td>
+                                      <td width='40%' align='right' valign='top'
+                                        style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+                                         {{vm.project.createdBy}}</td>
+                                    </tr> 
+                                    <tr >
+                                      <td align='left' valign='top'
+                                        style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+                                        <strong>Total Pages:</strong>
+                                      </td>
+                                      <td width='40%' align='right' valign='top'
+                                        style='color: #404041; font-size: 16px; line-height: 24px; padding: 8px; border-bottom: 1px solid #e5e5e5;'>
+                                         {{vm.project.pages}}</td>
+                                    </tr>                                 
+                                  </tbody>
+                                </table>
+                                <br />
+                             
+                            </div>
+
+                            <div class="clearfix"></div>
                           </div>
-
-                          <div class="clearfix"></div>
-                        </div>
                         
 
 
@@ -89,7 +89,7 @@
 
 
 
-                        <div class="tab-pane fade" id="sub_projects" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" tabindex="0">
+                        <div class="tab-pane fade" id="sub_projects" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" >
                           <div ng-include="'app/src/project/subList.html'"></div>
                         </div>                       
                       </div>

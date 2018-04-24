@@ -1,13 +1,13 @@
  <!-- BEGIN HEADER -->
-        <header data-ng-include="'app/layout/templates/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top"> </header>
+        <header data-ng-include="'app/layout/templates/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top" role="banner"> </header>
         <!-- END HEADER -->
         <div class="clearfix"> </div>
         <!-- BEGIN CONTAINER -->
-        <section class="page-container" role="main">
+        <main class="page-container" role="main">
             <!-- BEGIN SIDEBAR -->
-            <sidebar data-ng-include="'app/layout/templates/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </sidebar>
+            <aside role="complementary" data-ng-include="'app/layout/templates/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </aside>
             <!-- END SIDEBAR -->
-            <div class="page-content-wrapper">
+            <section class="page-content-wrapper"  role="region">
                 <div class="page-content">
                     <!-- BEGIN PAGE HEAD -->
                     <div data-ng-include="'app/layout/templates/page-head.html'" data-ng-controller="PageHeadController" class="page-head" aria-label="page head"> </div>
@@ -16,17 +16,17 @@
                     <div ui-view class="fade-in-up"> </div>
                     <!-- END ACTUAL CONTENT -->
                 </div>
-            </div>
+            </section>
             <!-- BEGIN QUICK SIDEBAR -->
             <a href="javascript:;" class="page-quick-sidebar-toggler">
                 <i class="icon-login"></i>
             </a>
             
             <!-- END QUICK SIDEBAR -->
-        </section>
+        </main>
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
-        <footer data-ng-include="'app/layout/templates/footer.html'" data-ng-controller="FooterController" class="page-footer"> </footer>
+        <footer role="contentinfo" data-ng-include="'app/layout/templates/footer.html'" data-ng-controller="FooterController" class="page-footer"> </footer>
         <!-- END FOOTER -->
         <!-- BEGIN QUICK NAV -->
         

@@ -59,6 +59,20 @@
           },
           controllerAs: 'vm'
         }
+      },
+      {
+        state: 'auth.newOrganization',
+        config: {
+          url: '/organization/new',
+          fullPage : true,
+          templateUrl: "app/util/auth/organization/new.html",
+          controller: 'organizationAuthNewCtrl',
+          data : {
+            pageTitle : 'New Organization',
+            //  pageSubTitle : 'User List'
+          },
+          controllerAs: 'vm'
+        }
       }
 //      ,
 //      {
