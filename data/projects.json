@@ -9,6 +9,9 @@
     "createdBy": "Vodemont",
     "compiler": "Jennifer Rosario",
     "status": "Complete",
+    "type": "Volunteer",
+    "role": "Proof Reader 1",
+    "file": "harry_potter.pdf",
      "subProjects":[{
         "id": "5acb35c73a5dd5dfff3ae8e4",
             "name": "P-1-10",
@@ -19,6 +22,20 @@
                 "company": "XIXAN",
                 "email": "sario@xixan.com",
                 "mobile": "9111111111"
+            },
+            "reader1":{
+                "name": "Jennifer Rosario",
+                "gender": "female",
+                "company": "XIXAN",
+                "email": "sario@xixan.com",
+                "mobile": "9111111111"
+            },
+            "reader2":{
+                "name": "John Doe",
+                "gender": "male",
+                "company": "Hello",
+                "email": "barr@obliq.com",
+                "mobile": "9111111113"
             },
             "pages": 10,
             "pdf_file":"abc.pdf",
@@ -35,6 +52,20 @@
                 "email": "barr@obliq.com",
                 "mobile": "9111111112"
             },
+            "reader1":{
+                "name": "Steele Barr",
+                "gender": "male",
+                "company": "OBLIQ",
+                "email": "barr@obliq.com",
+                "mobile": "9111111112"
+            },
+            "reader2":{
+                "name": "Jennifer Rosario",
+                "gender": "female",
+                "company": "XIXAN",
+                "email": "sario@xixan.com",
+                "mobile": "9111111111"
+            },
             "pages": 10,
             "pdf_file":"efg.pdf",
             "word_file": "efg.docx",
@@ -49,6 +80,20 @@
                 "company": "Hello",
                 "email": "barr@obliq.com",
                 "mobile": "9111111113"
+            },
+            "reader1":{
+                "name": "John Doe",
+                "gender": "male",
+                "company": "Hello",
+                "email": "barr@obliq.com",
+                "mobile": "9111111113"
+            },
+            "reader2":{
+                "name": "Steele Barr",
+                "gender": "male",
+                "company": "OBLIQ",
+                "email": "barr@obliq.com",
+                "mobile": "9111111112"
             },
             "pages": 10,
             "pdf_file":"xyz.pdf",
@@ -67,6 +112,9 @@
     "createdBy": "Sauron",
     "compiler": "Steele Barr",
     "status": "In Progress",
+    "type": "Paid",
+    "role": "Proof Reader 2",
+    "file": "lord_of_rings.pdf",
      "subProjects":[{
         "id": "5acb35c73a5dd5dfff3ae8e4",
             "name": "P-1-10",
@@ -77,6 +125,20 @@
                 "company": "XIXAN",
                 "email": "sario@xixan.com",
                 "mobile": "9111111111"
+            },
+            "reader1":{
+                "name": "John Doe",
+                "gender": "male",
+                "company": "Hello",
+                "email": "barr@obliq.com",
+                "mobile": "9111111113"
+            },
+            "reader2":{
+                "name": "Steele Barr",
+                "gender": "male",
+                "company": "OBLIQ",
+                "email": "barr@obliq.com",
+                "mobile": "9111111112"
             },
             "pages": 10,
             "pdf_file":"abc.pdf",
@@ -92,6 +154,20 @@
                 "company": "OBLIQ",
                 "email": "barr@obliq.com",
                 "mobile": "9111111112"
+            },
+            "reader1":{
+                "name": "Steele Barr",
+                "gender": "male",
+                "company": "OBLIQ",
+                "email": "barr@obliq.com",
+                "mobile": "9111111112"
+            },
+            "reader2":{
+                "name": "Jennifer Rosario",
+                "gender": "female",
+                "company": "XIXAN",
+                "email": "sario@xixan.com",
+                "mobile": "9111111111"
             },
             "pages": 10,
             "pdf_file":"efg.pdf",

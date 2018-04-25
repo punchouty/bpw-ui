@@ -76,7 +76,7 @@
          {
             state: 'app.projectView',
             config:  { 
-               url: "/projects/:id/view",
+               url: "/projects/:id/view?tab",
                templateUrl: "app/src/project/view.html",            
                data: {pageTitle: 'Project Details'},
                controller: "projectViewCtrl",
@@ -140,6 +140,16 @@
                templateUrl: "app/src/approval/list.html",            
                data: {pageTitle: 'Approvals'},
                controller: "approvalsListCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+         {
+            state: 'app.stuff',
+            config:  { 
+               url: "/mystuff",
+               templateUrl: "app/src/stuff/view.html",            
+               data: {pageTitle: 'My Stuff'},
+               controller: "stuffCtrl",
                controllerAs: 'vm'               
             }
         },

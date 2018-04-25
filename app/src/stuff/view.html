@@ -1,0 +1,91 @@
+
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <!-- <li>
+        <a ui-sref="dashboard">Blank Page</a>
+        <i class="fa fa-circle"></i>
+    </li> -->
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row" >
+    <div class="col-md-12">
+        <!-- BEGIN: ACCORDION DEMO -->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-green-sharp">
+                    <i class="icon-settings font-green-sharp"></i>
+                    <span class="caption-subject bold uppercase">My Stuff (Proof Reader)</span>
+                    <span class="caption-helper hide"></span>
+                </div>
+                <div class="actions">
+                     <!-- <a class="btn red btn-outline btn-circle" href="#" ng-click="vm.goBack()">  <i class="fa  fa-mail-reply"></i> Back </a> -->
+                </div>
+            </div>
+            <div class="portlet-body">  
+
+
+
+                    <div id="myTab">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="tab active" role="presentation">
+                          <a id="tab1" href="" data-target="#basic_info" role="tab" aria-controls="basic_info" aria-selected="true" data-toggle="tab" >Projects</a>
+                        </li>
+                        <li class="tab" role="presentation">
+                          <a id="tab2" href="" data-target="#sub_projects" role="tab" aria-controls="sub_projects" aria-selected="false" data-toggle="tab" >Sub Projects</a>
+                        </li>                        
+                      </ul>
+
+                      <div id="myTabContent" class="tab-content" aria-live="polite">
+                        <div class="tab-pane fade in active" id="basic_info" role="tabpanel" aria-labelledby="tab1" aria-hidden="false" >                          
+                           <div ng-include="'app/src/stuff/list.html'"></div>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="sub_projects" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" >
+                          <div ng-include="'app/src/stuff/subList.html'"></div>
+                        </div>                       
+                      </div>
+                    </div>
+            		
+            	
+                <div class="clearfix"></div>
+
+
+        	</div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS-->
+<script>
+    // call any jquery or angularjs code ehre
+</script>
+<!-- BEGIN MAIN JS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

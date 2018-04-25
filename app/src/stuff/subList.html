@@ -29,13 +29,11 @@
 						<thead>
 							<tr>
 								
-								<th>Name</th>
-								<th>Pdf File</th>
-								<th>Word File</th>
-								<th>Pages</th>
-								<th>Proof Reader 1</th>
-								<th>Proof Reader 2</th>
+								<th>Project Name</th>
+								<th>Sub Projects</th>								
 								<th>Status</th>
+								<th>Word File</th>
+								<th>No of Words</th>
 								<th>Actions</th>
 
 
@@ -47,45 +45,32 @@
 
 							<tr class="odd gradeX" ng-repeat="row in vm.master">
 								<td>
-									<a ui-sref="app.subProjectView({id: row.id})">{{ row.name }}</a>
+									{{ row.projectName }}
 								</td>
 								<td>
-									<a href=""> {{ row.pdf_file }} </a>
+									{{row.subProject}}
 								</td>
-								<td>
-									<a href=""> {{ row.word_file }} </a>
-								</td>
-								<td>
-									{{ row.pages }}
-								</td>
-								<td>
-									{{ row.reader1.name  }} 
-									<span>
-										<button class="btn btn-xs btn-info no-margin" type="button"
-										 ng-click="vm.addProofReader(row)">
-											<i class="icon-pencil"></i> Edit
-										</button>
-									</span>
-								</td>	
-								<td>
-									{{ row.reader2.name  }}
-									<span>
-										<button class="btn btn-xs btn-info no-margin" type="button"
-										 ng-click="vm.addProofReader(row)">
-											<i class="icon-pencil"></i> Edit
-										</button>
-									</span>
-								</td>												
 								<td>						
 									<span class="label label-sm label-info">{{row.status}}</span>									
-								</td>
+								</td>	
+								<td>
+									<div class="file btn btn-sm btn-primary file-button" ng-if="row.status != 'Complete'">
+										Upload
+										<input type="file" name="file"/>
+									</div>
+									<div><a href="">{{row.wordFile}}</a></div>
+								</td>							
+								<td>
+									{{ row.no_of_words }} 
+								</td>																	
+								
 								<td data-title="'Actions'" width="8%">
 
-									 <div class="btn-group btn-group-xs btn-group-solid button-margin-class">
+									 <div class="btn-group btn-group-xs btn-group-solid button-margin-class" ng-if="row.status == 'In Progress'">
 		                                  
 	                                    <button class="btn btn-xs btn-info no-margin" type="button"
-										 ng-click="vm.addProofReader(row)">
-											<i class="icon-plus"></i> Assign proof reader
+										 ng-click="row.status = 'Complete'">
+											<i class="icon-plus"></i> Mark Complete
 										</button>
 										
 	                              

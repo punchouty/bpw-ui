@@ -1,0 +1,60 @@
+ <div class="portlet-body"> 
+            	<div class="table-responsive">
+            		<table
+						class="table table-striped table-bordered table-hover">
+						<thead>
+							<tr>
+								
+								<th>Name</th>
+								<th>Sub Projects</th>
+								<th>Original File</th>
+								<th>Status</th>
+								<th>Actions</th>
+
+
+							</tr>
+
+
+						</thead>
+						<tbody>
+
+							<tr class="odd gradeX" ng-repeat="row in vm.projects">
+								<td>
+									{{ row.name }}
+								</td>
+								<td>
+									{{ row.subProjects.length }}
+								</td>
+								<td>
+									<a href="">{{ row.file }}</a>
+								</td>									
+								<td>						
+									<span class="label label-sm label-info">{{row.status}}</span>									
+								</td>
+								<td>
+
+									 <div class="btn-group btn-group-xs btn-group-solid button-margin-class" ng-if="row.status == 'Complete'">
+
+									 	<button class="btn btn-xs btn-info no-margin" type="button"
+										 ng-click="">
+											<i class="icon-magnifier"></i> Join
+										</button>			                                  
+	                                    
+										<button class="btn btn-xs btn-success no-margin" type="button" ng-click="$state.go('app.projectView', {id: row.id, tab: 2})">
+											<i class="icon-download"></i> Sub Projects
+										</button>
+										
+	                              
+	                                </div>
+									
+								</td>
+								
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+					<div class="clearfix"></div>
+
+
+        	</div>

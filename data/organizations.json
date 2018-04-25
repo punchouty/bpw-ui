@@ -19,7 +19,9 @@
     "quotaConsumed": 29617,
     "docsProcessed": 12000,
     "lastIncrease": 100000,
-    "updateDate": "2018-01-23T01:44:32"
+    "updateDate": "2018-01-23T01:44:32",
+    "role": "Proof Reader 1",
+    "type": "Paid"
   },
   {
     "id": "5acb35c73a5dd5dfff3ae8e3",
@@ -41,7 +43,9 @@
     "quotaConsumed": 31926,
     "docsProcessed": 13000,
     "lastIncrease": 100000,
-    "updateDate": "2018-02-23T01:44:32"
+    "updateDate": "2018-02-23T01:44:32",
+    "role": "Proof Reader 2",
+    "type": "Volunteer"
   },
   {
     "id": "5acb35c7ca44043df753db3a",
@@ -63,6 +67,8 @@
     "quotaConsumed": 209,
     "docsProcessed": 14000,
     "lastIncrease": 100000,
-    "updateDate": "2018-03-23T01:44:32"
+    "updateDate": "2018-03-23T01:44:32",
+    "role": "Compiler",
+    "type": "Paid"
   }
 ]

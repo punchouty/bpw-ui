@@ -15,7 +15,7 @@
             <div class="portlet-title">
                 <div class="caption font-green-sharp">
                     <i class="icon-settings font-green-sharp"></i>
-                    <span class="caption-subject bold uppercase">{{vm.project.name}}</span>
+                    <span class="caption-subject bold uppercase">{{vm.project.name}} </span><span class="label label-sm label-info">{{vm.project.status}}</span>
                     <span class="caption-helper hide"></span>
                 </div>
                 <div class="actions">
@@ -28,16 +28,16 @@
 
                     <div id="myTab">
                       <ul class="nav nav-tabs" role="tablist">
-                        <li class="tab active" role="presentation">
+                        <li class="tab" role="presentation" ng-class="{active: selected=='1'}">
                           <a id="tab1" href="" data-target="#basic_info" role="tab" aria-controls="basic_info" aria-selected="true" data-toggle="tab" >Basic Info</a>
                         </li>
-                        <li class="tab" role="presentation">
+                        <li class="tab" role="presentation" ng-class="{active: selected=='2'}">
                           <a id="tab2" href="" data-target="#sub_projects" role="tab" aria-controls="sub_projects" aria-selected="false" data-toggle="tab" >Sub Projects</a>
                         </li>                        
                       </ul>
 
                       <div id="myTabContent" class="tab-content" aria-live="polite">
-                        <div class="tab-pane fade in active" id="basic_info" role="tabpanel" aria-labelledby="tab1" aria-hidden="false" >
+                        <div class="tab-pane in" id="basic_info" role="tabpanel" aria-labelledby="tab1" aria-hidden="false" ng-class="{active: selected=='1', fade: selected=='2'}">
                           
                             <br>
                             <div id="info" class="row">
@@ -76,6 +76,93 @@
                                   </tbody>
                                 </table>
                                 <br />
+
+                                <div class="form-actions">
+                                  <div class="row">
+                                      <div class="text-right">
+                                          <button type="button" class="btn green" ng-disabled="vm.project.status == 'Complete'" ng-click="vm.showEdit = true">Edit</button>
+                                      </div>
+                                  </div>
+                              </div>
+                             
+                            </div>
+
+                            <div class="col-xs-4 col-xs-offset-2" ng-if="vm.showEdit">
+
+                              <form name="vm.projectForm">
+                                
+                                <fieldset> 
+
+                                    <div class="form-body">
+                                       <div class="form-group" ng-class="{'has-error':vm.projectForm.name.$dirty && vm.projectForm.name.$invalid}">
+                                            <label>Project Name</label>
+                                            <div class="">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-home"></i>
+                                                    </span>
+                                                    <input type="text" class="form-control" name="name" placeholder="Name" ng-model="vm.newProject.name" required="" aria-describedby="name"  > </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="form-group" ng-class="{'has-error':vm.projectForm.compiler.$dirty && vm.projectForm.compiler.$invalid}">
+                                            <label>Compiler</label>
+                                            <div class="">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                    <!-- <input type="text" class="form-control" name="compiler" placeholder="compiler" ng-model="vm.project.compiler" required="" aria-describedby="compiler"  > </div> -->
+                                                    <input type="text" ng-model="vm.newProject.compiler"              
+                                                    placeholder="compiler"
+                                                    uib-typeahead="user as user.name for user in vm.getUsers($viewValue)"
+                                                    typeahead-loading="loading" typeahead-no-results="noResults"
+                                                    typeahead-min-length="3" typeahead-on-select="vm.onUserChange(vm.project.compiler)" class="form-control " required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" ng-if="vm.newProject.compiler.name">
+                                            <label>Is Volunteer or Paid</label>
+                                            <div class="">
+                                                <div class="mt-radio-inline" ng-init="vm.newProject.compiler.type = 'Volunteer'">
+                                                    <label class="mt-radio">
+                                                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="Volunteer" checked="" ng-model="vm.newProject.compiler.type"> Volunteer
+                                                        <span></span>
+                                                    </label>
+                                                    <label class="mt-radio">
+                                                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="Paid" ng-model="vm.newProject.compiler.type"> Paid
+                                                        <span></span>
+                                                    </label>                            
+                                                </div>
+                                            </div>
+                                        </div>     
+
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="text-center">
+
+                                                    
+                                                    <button  class="btn btn-success" ng-click="vm.saveDetails(vm.projectForm)" role="button" aria-label="continue"
+                                                    ng-disabled="vm.projectForm.$invalid"> Save
+                                                        
+                                                    </button>
+
+                                                    <button  class="btn btn-danger"  ng-click="vm.showEdit = false" role="button" aria-label="cancel"> Cancel
+                                                        
+                                                    </button>     
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>   
+
+                                    </div>   
+                                     
+                                </fieldset>
+
+                              </form>  
                              
                             </div>
 
@@ -89,7 +176,7 @@
 
 
 
-                        <div class="tab-pane fade" id="sub_projects" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" >
+                        <div class="tab-pane" id="sub_projects" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" ng-class="{active: selected=='2', fade: selected=='1'}">
                           <div ng-include="'app/src/project/subList.html'"></div>
                         </div>                       
                       </div>

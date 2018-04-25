@@ -5,16 +5,16 @@
     .module('util.auth')
     .controller('SigninController', SigninController);
 
-  SigninController.$inject = ['$scope', '$state', 'principal', 'logger'];
+  SigninController.$inject = ['$scope', '$state', 'principal', 'logger', '__env'];
   /* @ngInject */
-  function SigninController($scope, $state, principal, logger) {
+  function SigninController($scope, $state, principal, logger, __env) {
     var vm = this;
 
     vm.signin = signin;
 
     function signin() {
     	console.log(vm.mobile + " : " + vm.password + " : " + vm.rememberMe);
-		  $state.go('app.organizations');
+		  $state.go('app.stuff');
     }
 
     activate();

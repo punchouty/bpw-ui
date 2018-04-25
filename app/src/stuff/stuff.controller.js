@@ -3,44 +3,59 @@
 
   angular
     .module('app')
-    .controller('projectViewCtrl', projectViewCtrl);
+    .controller('stuffCtrl', stuffCtrl);
 
-  projectViewCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'projectFactory', '$uibModal' , '$rootScope', '$window'];
+  stuffCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'stuffFactory', '$uibModal' , '$rootScope', '$window'];
   /* @ngInject */
-  function projectViewCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , projectFactory, $uibModal , $rootScope, $window ) {
+  function stuffCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , stuffFactory, $uibModal , $rootScope, $window ) {
 
     var self = this;
 
     self.totalCount = 100;
     self.plans = [{id: "Basic", title:"Basic"},{id: "Advance", title:"Advance"},{id: "Intermediate",title: "Intermediate"}];
     self.projectId = $stateParams.id;
-    self.tab = $stateParams.tab;
     self.showEdit = false;
 
     activate();
 
     function activate() {
-      self.master=[];
-
-      $scope.selected = self.tab? self.tab : '1';
+      self.master=[]
       
-      projectFactory.getProjectById(self.projectId)
+      stuffFactory.getProjectById(self.projectId)
           .then(function(response) {  
-              self.project = response.data;
-               self.master = response.data.subProjects;                 
-               console.log(self.master);
+              self.project = response.data;                           
+               console.log("master",self.master);
               // pagination();  
           },function() {
               logger.error("Something went wrong")       
           });
 
-      projectFactory.getUsers()
+       stuffFactory.getSubProjects(self.projectId)
+          .then(function(response) {  
+              self.master = response.data;
+                           
+               console.log(self.master);
+              // pagination();  
+          },function() {
+              logger.error("Something went wrong")       
+          });
+   
+
+      stuffFactory.getUsers()
           .then(function(response) {  
                self.users = response.data;                 
                console.log(self.users);                
           },function() {
               logger.error("Something went wrong")       
           });
+
+        stuffFactory.getProjects()
+          .then(function(response) {  
+               self.projects = response.data;                 
+               console.log(self.projects);                
+          },function() {
+              logger.error("Something went wrong")       
+          });   
       
     }
 

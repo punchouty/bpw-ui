@@ -6,8 +6,10 @@
     "url": "http://www.abc.com/lord-of-rings",
     "date": "2016-08-21T11:34:00",
     "createdBy": "Sauron",
-    "status": "Complete",
+    "status": "In Progress",
     "compiler": "Jennifer Rosario",
+    "type": "Paid",
+    "role": "Proof Reader 2",
     "subProjects":[{
         "id": "5acb35c73a5dd5dfff3ae8e4",
             "name": "P-1-10",
@@ -19,11 +21,26 @@
                 "email": "sario@xixan.com",
                 "mobile": "9111111111"
             },
+            "reader1":{
+                "name": "Jennifer Rosario",
+                "gender": "female",
+                "company": "XIXAN",
+                "email": "sario@xixan.com",
+                "mobile": "9111111111"
+            },
+            "reader2":{
+                "name": "John Doe",
+                "gender": "male",
+                "company": "Hello",
+                "email": "barr@obliq.com",
+                "mobile": "9111111113"
+            },
             "pages": 10,
             "pdf_file":"lord_of_rings_P-1-10.pdf",
             "word_file": "lord_of_rings_P-1-10.docx",
             "words": 5467,
             "status": "Complete"
+
         },{
             "id": "5acb35c73a5dd5dfff3ae8e6",
             "name": "P-10-20",
@@ -35,11 +52,26 @@
                 "email": "barr@obliq.com",
                 "mobile": "9111111112"
             },
+            "reader1":{
+                "name": "Steele Barr",
+                "gender": "male",
+                "company": "OBLIQ",
+                "email": "barr@obliq.com",
+                "mobile": "9111111112"
+            },
+            "reader2":{
+                "name": "Jennifer Rosario",
+                "gender": "female",
+                "company": "XIXAN",
+                "email": "sario@xixan.com",
+                "mobile": "9111111111"
+            },
             "pages": 10,
             "pdf_file":"lord_of_rings_P-10-20.pdf",
             "word_file": "lord_of_rings_P-10-20.docx",
             "words": 4578,
             "status": "Complete"
+
         },{
             "id": "5acb35c73a5dd5dfff3ae8e5",
             "name": "P-20-30",
@@ -51,11 +83,26 @@
                 "email": "barr@obliq.com",
                 "mobile": "9111111113"
             },
+            "reader1":{
+                "name": "John Doe",
+                "gender": "male",
+                "company": "Hello",
+                "email": "barr@obliq.com",
+                "mobile": "9111111113"
+            },
+            "reader2":{
+                "name": "Steele Barr",
+                "gender": "male",
+                "company": "OBLIQ",
+                "email": "barr@obliq.com",
+                "mobile": "9111111112"
+            },
             "pages": 10,
             "pdf_file":"lord_of_rings_P-20-30.pdf",
             "word_file": "lord_of_rings_P-20-30.docx",
             "words": 6532,
             "status": "In Progress"
+
         }]
     
   }

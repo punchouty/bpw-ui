@@ -2,34 +2,34 @@
   'use strict';
 
   angular
-    .module('app')
-    .controller('subProjectViewCtrl', subProjectViewCtrl);
+    .module('app.profile')
+    .controller('prfProjectsListCtrl', prfProjectsListCtrl);
 
-  subProjectViewCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'projectFactory', '$uibModal' , '$rootScope', '$window' ];
+  prfProjectsListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'profileFactory' , '$rootScope' ];
   /* @ngInject */
-  function subProjectViewCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , projectFactory, $uibModal , $rootScope, $window ) {
+  function prfProjectsListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , profileFactory , $rootScope ) {
 
     var self = this;
 
     self.totalCount = 100;
     self.plans = [{id: "Basic", title:"Basic"},{id: "Advance", title:"Advance"},{id: "Intermediate",title: "Intermediate"}];
-    self.subProjectId = $stateParams.id;
+
 
     activate();
 
     function activate() {
-      self.master=[];
-     
+      self.master=[]
       
-      projectFactory.getSubProjectById(self.subProjectId)
+      profileFactory.getProjects()
           .then(function(response) {  
-              self.project = response.data;
-               self.master = response.data.subProjects;                 
+               self.master = response.data;                 
                console.log(self.master);
-               pagination();  
+               // pagination();  
           },function() {
               logger.error("Something went wrong")       
-          });     
+          });
+
+      
       
     }
   
@@ -101,14 +101,15 @@
               }
         });
     }
-  
 
-   self.goBack = function() {
-      // $window.history.go(-2);
-      $window.history.back();
+    self.newProject = function() {
+      $state.go('app.newProject');
     }
-
-   
+  
+    self.projectView = function(row) {
+      $state.go('app.projectView',{id: row.id});
+    }
+  
    
   
   }
