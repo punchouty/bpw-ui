@@ -13,15 +13,18 @@
 
     self.totalCount = 100;
     self.plans = [{id: "Basic", title:"Basic"},{id: "Advance", title:"Advance"},{id: "Intermediate",title: "Intermediate"}];
-    self.projectId = $stateParams.id;
+    self.id = $stateParams.id;
     self.showEdit = false;
+
+    $scope.sortType     = 'projectName'; // set the default sort type
+    $scope.sortReverse  = false;  // 
 
     activate();
 
     function activate() {
       self.master=[]
-      
-      stuffFactory.getProjectById(self.projectId)
+      console.log("Id",self.id);
+      stuffFactory.getProjectById(self.id)
           .then(function(response) {  
               self.project = response.data;                           
                console.log("master",self.master);
@@ -30,7 +33,7 @@
               logger.error("Something went wrong")       
           });
 
-       stuffFactory.getSubProjects(self.projectId)
+       stuffFactory.getSubProjects(self.id)
           .then(function(response) {  
               self.master = response.data;
                            
@@ -79,6 +82,15 @@
       }
     }
 
+self.markComplete = function(row) {
+   row.status = 'Complete';
+   if(self.id < 2 )
+      $state.go('app.workflowEmail', {id: +self.id + 1});
+    else 
+      $state.go('app.compilerEmail', {id: +self.id + 1});
+
+
+ }
 
   function pagination() {
       self.tableParams = new NgTableParams({

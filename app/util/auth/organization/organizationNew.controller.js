@@ -37,6 +37,7 @@
     }   
 
     self.search = function(mobile) {
+        self.organization.mobile = mobile;
         self.organization.contact = "demo";
         self.organization.email = "demo@demo.com";
     }

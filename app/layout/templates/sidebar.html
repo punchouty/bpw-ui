@@ -10,10 +10,70 @@
         <li class="heading">
             <h3>GENERAL</h3>
         </li>
+        <li class="nav-item" ><a href="javascript:;">
+                <i class="icon-globe"></i> <span class="title">Work Flow</span> <span
+                class="arrow "></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item" >
+                    <a href="javascript:;">
+                       <i class="icon-globe"></i> <span> Project </span><span class="arrow "></span>            
+                    </a>
+
+                    <ul class="sub-menu">
+                        <li><a ui-sref="app.newProject"> <i
+                                class="icon-globe"></i> Create</span>
+                        </a></li>
+                        <li><a ui-sref="app.newQuickProject"> <i
+                                class="icon-globe"></i> Quck Add</span>
+                        </a></li>
+                        
+
+                    </ul>
+                </li>
+                <li><a ui-sref="app.workflowEmail({id: 1})"> 
+                    <i class="icon-globe"></i>Assisgnment Email 1</span>
+                    </a>
+                </li>
+
+                <li><a ui-sref="app.dashboard({id: 1})"> 
+                    <i class="icon-globe"></i>Proof Reader 1 </span>
+                    </a>
+                </li>
+
+                <li><a ui-sref="app.workflowEmail({id: 2})"> 
+                    <i class="icon-globe"></i>Assisgnment Email 2</span>
+                    </a>
+                </li>
+
+                <li><a ui-sref="app.dashboard({id: 2})"> 
+                    <i class="icon-globe"></i>Proof Reader 2 </span>
+                    </a>
+                </li>
+
+                 <li><a ui-sref="app.compilerEmail({id: 1})"> 
+                    <i class="icon-globe"></i>Assisgnment Email Compiler</span>
+                    </a>
+                </li>
+
+                <li><a ui-sref="app.compilerDashboard({id: 2})"> 
+                    <i class="icon-globe"></i>Compiler</span>
+                    </a>
+                </li>
+
+                <li><a ui-sref="app.compilerSubProject({id: 2})"> 
+                    <i class="icon-globe"></i>Sub Projects</span>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+
         <li class="start nav-item">
-            <a ui-sref="app.stuff" role="link" aria-label="stuff">
+            <a ui-sref="app.dashboard({id: 1})" role="link" aria-label="dashboard">
                 <i class="icon-home"></i>
-                <span class="title">My Stuff</span>
+                <span class="title">Dashboard</span>
             </a>
         </li>
          <li class="start nav-item">

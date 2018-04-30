@@ -87,13 +87,16 @@ Bootstrap Wizard
       display: inline-block; }
 
  .login .custom-content .form-control {
-    background-color: #fff !important;
-   border: 1px solid #c2cad8 !important;
-   color: #555 !important;
+    background-color: #fff;
+   border: 1px solid #c2cad8;
+   color: #555;
    }
 
   .login .custom-content .btn {
     background-color: #36c6d3;
     border-color: #2bb8c4;
     color: #fff;
+}
+.login .dropdown-menu a  {
+  color: #555 !important;
 }

@@ -16,7 +16,7 @@
     };
 
     self.totalCount = 100;
-    self.statuses = [{id:"", name: "Select"},{id: "New", name: "New"},{id: "Approved", name: "Approved"}, {id: "Rejected", name: "Rejected"}];
+    self.statuses = [{id:"", name: "Select Status"},{id: "New", name: "New"},{id: "Approved", name: "Approved"}, {id: "Rejected", name: "Rejected"}];
 
 
     activate();

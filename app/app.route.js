@@ -144,15 +144,56 @@
             }
         },
          {
-            state: 'app.stuff',
+            state: 'app.dashboard',
             config:  { 
-               url: "/mystuff",
-               templateUrl: "app/src/stuff/view.html",            
-               data: {pageTitle: 'My Stuff'},
+               url: "/dashboard?id",
+               templateUrl: "app/src/dashboard/view.html",            
+               data: {pageTitle: 'Dashboard'},
                controller: "stuffCtrl",
                controllerAs: 'vm'               
             }
         },
+        {
+            state: 'app.workflowEmail',
+            config:  { 
+               url: "/workflowEmail?id",
+               templateUrl: "app/src/workflow/email.html",            
+               data: {pageTitle: 'workflow'},
+               controller: "workFlowEmailCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+        {
+            state: 'app.compilerEmail',
+            config:  { 
+               url: "/compilerEmail?id",
+               templateUrl: "app/src/workflow/compiler.html",            
+               data: {pageTitle: 'workflow'},
+               controller: "workFlowEmailCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+        {
+            state: 'app.compilerDashboard',
+            config:  { 
+               url: "/compilerDashboard?id",
+               templateUrl: "app/src/workflow/list.html",            
+               data: {pageTitle: 'Compiler'},
+               controller: "workflowProjectsListCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+        {
+            state: 'app.compilerSubProject',
+            config:  { 
+               url: "/compilerSubProject?id",
+               templateUrl: "app/src/workflow/subList.html",            
+               data: {pageTitle: 'Compiler'},
+               controller: "compilerSubProjectListCtrl",
+               controllerAs: 'vm'               
+            }
+        },
+
 
     ];
   }

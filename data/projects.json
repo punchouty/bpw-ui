@@ -12,6 +12,8 @@
     "type": "Volunteer",
     "role": "Proof Reader 1",
     "file": "harry_potter.pdf",
+    "pdfFile": "harry_potter.pdf",
+    "wordFile": "harry_potter.docx",
      "subProjects":[{
         "id": "5acb35c73a5dd5dfff3ae8e4",
             "name": "P-1-10",
@@ -115,6 +117,8 @@
     "type": "Paid",
     "role": "Proof Reader 2",
     "file": "lord_of_rings.pdf",
+    "pdfFile": "lord_of_rings.pdf",
+    "wordFile": "lord_of_rings.docx",
      "subProjects":[{
         "id": "5acb35c73a5dd5dfff3ae8e4",
             "name": "P-1-10",

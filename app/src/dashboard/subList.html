@@ -29,9 +29,19 @@
 						<thead>
 							<tr>
 								
-								<th>Project Name</th>
+								<th>
+									<a href="#" ng-click="sortType = 'projectName'; sortReverse = !sortReverse">Project Name
+										<span ng-show="sortType == 'projectName' && !sortReverse" class="fa fa-caret-down"></span>
+						            	<span ng-show="sortType == 'projectName' && sortReverse" class="fa fa-caret-up"></span>
+						            </a>
+								</th>
 								<th>Sub Projects</th>								
-								<th>Status</th>
+								<th>
+									<a href="#" ng-click="sortType = 'status'; sortReverse = !sortReverse">Status
+										<span ng-show="sortType == 'status' && !sortReverse" class="fa fa-caret-down"></span>
+						            	<span ng-show="sortType == 'status' && sortReverse" class="fa fa-caret-up"></span>
+						            </a>
+								</th>
 								<th>Word File</th>
 								<th>No of Words</th>
 								<th>Actions</th>
@@ -43,7 +53,7 @@
 						</thead>
 						<tbody>
 
-							<tr class="odd gradeX" ng-repeat="row in vm.master">
+							<tr class="odd gradeX" ng-repeat="row in vm.master  | orderBy:sortType:sortReverse">
 								<td>
 									{{ row.projectName }}
 								</td>
@@ -69,7 +79,7 @@
 									 <div class="btn-group btn-group-xs btn-group-solid button-margin-class" ng-if="row.status == 'In Progress'">
 		                                  
 	                                    <button class="btn btn-xs btn-info no-margin" type="button"
-										 ng-click="row.status = 'Complete'">
+										 ng-click="vm.markComplete(row)">
 											<i class="icon-plus"></i> Mark Complete
 										</button>
 										

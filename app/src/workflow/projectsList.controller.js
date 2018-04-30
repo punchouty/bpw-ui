@@ -3,26 +3,24 @@
 
   angular
     .module('app')
-    .controller('usersListCtrl', usersListCtrl);
+    .controller('workflowProjectsListCtrl', workflowProjectsListCtrl);
 
-  usersListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'userFactory' , '$rootScope' ];
+  workflowProjectsListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'projectFactory' , '$rootScope' ];
   /* @ngInject */
-  function usersListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , userFactory , $rootScope ) {
+  function workflowProjectsListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , projectFactory , $rootScope ) {
 
     var self = this;
 
     self.totalCount = 100;
-    self.roles = [{id: "Project Admin", title: "Project Admin"},{id: "Volunteer", title: "Volunteer"}];
+    self.plans = [{id: "Basic", title:"Basic"},{id: "Advance", title:"Advance"},{id: "Intermediate",title: "Intermediate"}];
 
-    $scope.sortType     = 'name'; // set the default sort type
-    $scope.sortReverse  = false;  
 
     activate();
 
     function activate() {
       self.master=[]
       
-      userFactory.getUsers()
+      projectFactory.getProjects()
           .then(function(response) {  
                self.master = response.data;                 
                console.log(self.master);
@@ -103,8 +101,14 @@
               }
         });
     }
-  
 
+    self.newProject = function() {
+      $state.go('app.newProject');
+    }
+  
+    self.projectView = function(row) {
+      $state.go('app.projectView',{id: row.id});
+    }
   
    
   

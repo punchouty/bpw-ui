@@ -126,9 +126,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             //             }
         })
         // Dashboard
-        .state('app.dashboard', {
+        .state('app.home', {
             parent : "app",
-            url: "/dashboard",
+            url: "/home",
             templateUrl: "views/dashboard.html",            
             data: {pageTitle: 'Admin Dashboard Template'},
             controller: "DashboardController",

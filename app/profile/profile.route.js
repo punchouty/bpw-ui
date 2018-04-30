@@ -33,8 +33,8 @@
         config: {
           url: '/me',
           data: {
-             pageTitle : 'New User Profile',
-             pageSubTitle : 'Account'
+             pageTitle : 'User Profile',
+             // pageSubTitle : 'Account'
           },
           templateUrl: "app/profile/profile.html",
           controller: 'ProfileController',
@@ -56,19 +56,19 @@
         }
       },
 
-      {
-        state: 'app.profile.history',
-        config: {
-          url: '/history',
-          data: {
-             pageTitle : 'History',
-             pageSubTitle : 'Account'
-          },
-          templateUrl: "app/profile/history/list.html",
-          controller: 'prfProjectsListCtrl',
-          controllerAs: 'vm'
-        }
-      },
+      // {
+      //   state: 'app.profile.history',
+      //   config: {
+      //     url: '/history',
+      //     data: {
+      //        pageTitle : 'History',
+      //        pageSubTitle : 'Account'
+      //     },
+      //     templateUrl: "app/profile/history/list.html",
+      //     controller: 'prfProjectsListCtrl',
+      //     controllerAs: 'vm'
+      //   }
+      // },
       {
         state: 'app.changePassword',
         config: {

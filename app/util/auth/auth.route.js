@@ -36,6 +36,20 @@
         }
       },
       {
+        state: 'auth.signup',
+        config: {
+          url: '/signup',
+          fullPage : true,
+          templateUrl: "app/util/auth/registration.html",
+          controller: 'SignupController',
+          data : {
+            pageTitle : 'Sign up',
+            //  pageSubTitle : 'User List'
+          },
+          controllerAs: 'vm'
+        }
+      },
+      {
         state: 'auth.signout',
         config: {
           controller: 'SignoutController',

@@ -3,11 +3,11 @@
 
   angular
     .module('app.profile')
-    .controller('prfProjectsListCtrl', prfProjectsListCtrl);
+    .controller('historyProjectsListCtrl', historyProjectsListCtrl);
 
-  prfProjectsListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'profileFactory' , '$rootScope' ];
+  historyProjectsListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'stuffFactory' , '$rootScope' ];
   /* @ngInject */
-  function prfProjectsListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , profileFactory , $rootScope ) {
+  function historyProjectsListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , stuffFactory , $rootScope ) {
 
     var self = this;
 
@@ -20,7 +20,7 @@
     function activate() {
       self.master=[]
       
-      profileFactory.getProjects()
+      stuffFactory.getProjects()
           .then(function(response) {  
                self.master = response.data;                 
                console.log(self.master);

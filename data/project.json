@@ -9,7 +9,9 @@
     "status": "In Progress",
     "compiler": "Jennifer Rosario",
     "type": "Paid",
-    "role": "Proof Reader 2",
+    "role": "Proof Reader 2",    
+    "pdfFile": "harry_potter.pdf",
+    "wordFile": "harry_potter.docx",
     "subProjects":[{
         "id": "5acb35c73a5dd5dfff3ae8e4",
             "name": "P-1-10",

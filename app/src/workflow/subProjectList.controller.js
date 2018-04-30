@@ -3,30 +3,28 @@
 
   angular
     .module('app')
-    .controller('usersListCtrl', usersListCtrl);
+    .controller('compilerSubProjectListCtrl', compilerSubProjectListCtrl);
 
-  usersListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'userFactory' , '$rootScope' ];
+  compilerSubProjectListCtrl.$inject = ['$state', '$stateParams', '$scope', '$http', 'logger', 'NgTableParams', '$filter' , 'stuffFactory' , '$rootScope', '$window'];
   /* @ngInject */
-  function usersListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , userFactory , $rootScope ) {
+  function compilerSubProjectListCtrl($state, $stateParams, $scope, $http, logger, NgTableParams, $filter , stuffFactory , $rootScope, $window ) {
 
     var self = this;
 
     self.totalCount = 100;
-    self.roles = [{id: "Project Admin", title: "Project Admin"},{id: "Volunteer", title: "Volunteer"}];
-
-    $scope.sortType     = 'name'; // set the default sort type
-    $scope.sortReverse  = false;  
+    self.plans = [{id: "Basic", title:"Basic"},{id: "Advance", title:"Advance"},{id: "Intermediate",title: "Intermediate"}];
+    self.projectId = $stateParams.id;
 
     activate();
 
     function activate() {
       self.master=[]
       
-      userFactory.getUsers()
+      stuffFactory.getSubProjects(self.projectId)
           .then(function(response) {  
                self.master = response.data;                 
                console.log(self.master);
-               // pagination();  
+               pagination();  
           },function() {
               logger.error("Something went wrong")       
           });
@@ -104,7 +102,10 @@
         });
     }
   
-
+    self.goBack = function() {
+      // $window.history.go(-2);
+      $window.history.back();
+    }
   
    
   
