@@ -6,15 +6,13 @@
             <table  class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Index</th>
-                        <th>name</th>
-                        <th>url</th>
+                        <th>Image Label</th>
+                        <th>File</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="vm.list">
                     <tr ng-repeat="item in vm.list" class="item" style="cursor: move;">
-                        <td>{{$index}}</td>
                         <td>{{item.name}}</td>
                         <td>{{item.url}}</td>
                         <td> 

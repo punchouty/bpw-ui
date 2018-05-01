@@ -8,7 +8,7 @@
     <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
     <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" ng-class="{'page-sidebar-menu-closed': settings.layout.pageSidebarClosed}">
         <li class="heading">
-            <h3>GENERAL</h3>
+            <h3>Navigation</h3>
         </li>
         <li class="nav-item" ><a href="javascript:;">
                 <i class="icon-globe"></i> <span class="title">Work Flow</span> <span
@@ -17,52 +17,52 @@
             <ul class="sub-menu">
                 <li class="nav-item" >
                     <a href="javascript:;">
-                       <i class="icon-globe"></i> <span> Project </span><span class="arrow "></span>            
+                       <i class="icon-globe"></i> <span> 1 : New Project </span><span class="arrow "></span>
                     </a>
 
                     <ul class="sub-menu">
                         <li><a ui-sref="app.newProject"> <i
-                                class="icon-globe"></i> Create</span>
+                                class="icon-globe"></i> Chapter Wise</span>
                         </a></li>
                         <li><a ui-sref="app.newQuickProject"> <i
-                                class="icon-globe"></i> Quck Add</span>
+                                class="icon-globe"></i> Automatic Split</span>
                         </a></li>
                         
 
                     </ul>
                 </li>
                 <li><a ui-sref="app.workflowEmail({id: 1})"> 
-                    <i class="icon-globe"></i>Assisgnment Email 1</span>
+                    <i class="icon-globe"></i>2 : Proof Reader Email</span>
                     </a>
                 </li>
 
                 <li><a ui-sref="app.dashboard({id: 1})"> 
-                    <i class="icon-globe"></i>Proof Reader 1 </span>
+                    <i class="icon-globe"></i>3 : Proof Reader Dashboard </span>
                     </a>
                 </li>
 
                 <li><a ui-sref="app.workflowEmail({id: 2})"> 
-                    <i class="icon-globe"></i>Assisgnment Email 2</span>
+                    <i class="icon-globe"></i>4 : Validator Email</span>
                     </a>
                 </li>
 
                 <li><a ui-sref="app.dashboard({id: 2})"> 
-                    <i class="icon-globe"></i>Proof Reader 2 </span>
+                    <i class="icon-globe"></i>5 : Validator Dashboard </span>
                     </a>
                 </li>
 
                  <li><a ui-sref="app.compilerEmail({id: 1})"> 
-                    <i class="icon-globe"></i>Assisgnment Email Compiler</span>
+                    <i class="icon-globe"></i>6 : Compiler Email</span>
                     </a>
                 </li>
 
-                <li><a ui-sref="app.compilerDashboard({id: 2})"> 
-                    <i class="icon-globe"></i>Compiler</span>
-                    </a>
-                </li>
+                <!--<li><a ui-sref="app.compilerDashboard({id: 2})"> -->
+                    <!--<i class="icon-globe"></i>7 : Compiler Dashboard</span>-->
+                    <!--</a>-->
+                <!--</li>-->
 
                 <li><a ui-sref="app.compilerSubProject({id: 2})"> 
-                    <i class="icon-globe"></i>Sub Projects</span>
+                    <i class="icon-globe"></i>7 : Compiler Action</span>
                     </a>
                 </li>
 

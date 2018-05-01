@@ -116,24 +116,29 @@
 
     self.list = [
                   {
-                    name:"file 1",
-                    url: "http://www.abc.com/file1"
+                    name:"Chapter 1",
+                    url: "http://www.abc.com/tale_of_two_cities_Chapter1.pdf",
+                      pages: 23
                   },
                   {
-                    name:"file 2",
-                    url: "http://www.abc.com/file2"
+                    name:"Chapter 2",
+                    url: "http://www.abc.com/tale_of_two_cities_Chapter2.pdf",
+                      pages: 29
                   },
                   {
-                    name:"file 3",
-                    url: "http://www.abc.com/file3"
+                    name:"Chapter 3",
+                    url: "http://www.abc.com/tale_of_two_cities_Chapter3.pdf",
+                      pages: 31
                   },
                   {
-                    name:"file 4",
-                    url: "http://www.abc.com/file4"
+                    name:"Chapter 4",
+                    url: "http://www.abc.com/tale_of_two_cities_Chapter4.pdf",
+                      pages: 35
                   },
                   {
-                    name:"file 5",
-                    url: "http://www.abc.com/file5"
+                    name:"Chapter 5",
+                    url: "http://www.abc.com/tale_of_two_cities_Chapter5.pdf",
+                      pages: 25
                   },
     ];
 

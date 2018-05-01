@@ -41,13 +41,13 @@
                                 </div>
 
                                 <div class="form-group" ng-class="{'has-error':vm.projectForm.page.$dirty && vm.projectForm.page.$invalid}">
-                                    <label class="col-md-4 control-label">Page per Sub Project</label>
+                                    <label class="col-md-4 control-label">Pages Per Sub Project</label>
                                     <div class="col-md-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-clone"></i>
                                             </span>
-                                            <input type="text" class="form-control" name="page" placeholder="page" ng-model="vm.project.page" required="" aria-describedby="page"  > </div>
+                                            <input type="text" class="form-control" name="page" placeholder="Page Count" ng-model="vm.project.page" required="" aria-describedby="page"  > </div>
                                     </div>
                                 </div>
 
@@ -60,7 +60,7 @@
                                             </span>
                                             <!-- <input type="text" class="form-control" name="compiler" placeholder="compiler" ng-model="vm.project.compiler" required="" aria-describedby="compiler"  > </div> -->
                                             <input type="text" ng-model="vm.project.compiler"              
-                                            placeholder="compiler"
+                                            placeholder="User Name"
                                             uib-typeahead="user as user.name for user in vm.getUsers($viewValue)"
                                             typeahead-loading="loading" typeahead-no-results="noResults"
                                             typeahead-min-length="3" typeahead-on-select="vm.onUserChange(vm.project.compiler)" class="form-control " required>
@@ -89,7 +89,7 @@
                                     <label for="fileuplod" class="col-md-4 control-label">File input</label>
                                     <div class="col-md-8">
                                         <input type="file" id="fileuplod" name="file" ng-model="vm.project.file">
-                                        <p class="help-block">Scan Quality 300 DP</p>
+                                        <div class="help-block">Suggested Image Scan Quality 300 dp</div>
                                     </div>
                                 </div>
 

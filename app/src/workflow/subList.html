@@ -45,7 +45,6 @@
 						            </a>
 								</th>
 								<th>No of Words</th>
-								<th>Actions</th>
 
 
 							</tr>
@@ -69,19 +68,19 @@
 									{{ row.no_of_words }} 
 								</td>																	
 								
-								<td data-title="'Actions'" width="8%">
+								<!--<td data-title="'Actions'" width="8%">-->
 
-									 <div class="btn-group btn-group-xs btn-group-solid button-margin-class" >
-		                                  
-	                                    <button class="btn btn-xs btn-info no-margin" type="button"
-										 ng-click="">
-											<i class="icon-plus"></i> Create Master Document
-										</button>
-										
-	                              
-	                                </div>
-									
-								</td>
+									 <!--<div class="btn-group btn-group-xs btn-group-solid button-margin-class" >-->
+		                                  <!---->
+	                                    <!--<button class="btn btn-xs btn-info no-margin" type="button"-->
+										 <!--ng-click="">-->
+											<!--<i class="icon-plus"></i> Create Master Document-->
+										<!--</button>-->
+										<!---->
+	                              <!---->
+	                                <!--</div>-->
+									<!---->
+								<!--</td>-->
 								
 							</tr>
 						</tbody>
@@ -89,7 +88,16 @@
 				</div>
 
 					<div class="clearfix"></div>
-
+				<div>
+					<button class="btn btn-info" type="button"
+					ng-click="">
+					<i class="icon-docs"></i> Create Master Document
+					</button>
+					<button class="btn btn-warning" type="button"
+							ng-click="">
+						<i class="icon-doc"></i> Preview
+					</button>
+				</div>
 
         	</div>
         </div>
