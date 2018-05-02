@@ -21,8 +21,8 @@
                                     <form class="form-horizontal" role="form" name="vm.projectForm" ng-submit="vm.onSubmit(vm.projectForm)" >
 
                                         <div class="form-body">
-                                            <ul class="nav nav-pills nav-justified steps">
-                                                <li ng-repeat="step in vm.steps" ng-class="{'active':step.step == vm.currentStep, 'done': step.step < vm.currentStep}"><h2  class="step" href="javascript:;"><span class="number"> {{step.step}} </span>  <span class="desc"><i class="fa fa-check"></i>{{step.name}}</span></h2> </li>                   
+                                            <ul class="nav nav-tabs nav-justified steps"  role="tablist">
+                                                <li ng-repeat="step in vm.steps" ng-class="{'active':step.step == vm.currentStep, 'done': step.step < vm.currentStep}"><a  class="step" href="javascript:;" role="tab" aria-controls="{{step.name}}" aria-selected="{{step.step == vm.currentStep? true: false}}" data-toggle="tab" tabindex="{{step.step == vm.currentStep? 0: -1}}"><span class="number"> {{step.step}} </span>  <span class="desc"><i class="fa fa-check"></i>{{step.name}}</span></a> </li>                   
                                             </ul>
                                             <div id="bar" class="progress progress-striped" role="progressbar">
                                                 <div class="progress-bar progress-bar-success" ng-style="{ 'width': vm.getProgress() + '%' }"> </div>
@@ -42,8 +42,7 @@
                                                     <button  class="btn btn-success" ng-if="vm.currentStep > 1" ng-click="vm.gotoStep(vm.currentStep - 1)" role="button" aria-label="go back">
                                                         <i class="fa fa-angle-left"></i> Back </button>
 
-                                                    <button  class="btn btn-success" ng-if="vm.currentStep < (vm.steps.length)"  ng-click="vm.gotoStep(vm.currentStep + 1)" role="button" aria-label="continue"
-                                                    ng-disabled="vm.check(vm.currentStep, vm.projectForm)"> Continue &nbsp;
+                                                    <button  class="btn btn-success" ng-if="vm.currentStep < (vm.steps.length)"  ng-click="vm.gotoStep(vm.currentStep, vm.projectForm)" role="button" aria-label="continue" > Continue &nbsp;
                                                         <i class="fa fa-angle-right"></i>
                                                     </button>
 

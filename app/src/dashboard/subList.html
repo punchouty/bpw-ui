@@ -64,9 +64,9 @@
 									<span class="label label-sm label-info">{{row.status}}</span>									
 								</td>	
 								<td>
-									<div class="file btn btn-sm btn-primary file-button" ng-if="row.status != 'Complete'">
+									<div class="file btn btn-sm btn-primary file-button" ng-if="row.status != 'Complete'" aria-label="click to upload file">
 										Upload
-										<input type="file" name="file"/>
+										<input type="file" name="file" aria-label="click to upload file" placeholder="click to upload file" aria-describedby=="click to upload file"/>
 									</div>
 									<div><a href="">{{row.wordFile}}</a></div>
 								</td>							

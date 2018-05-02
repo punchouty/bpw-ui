@@ -43,8 +43,11 @@
     ];
             
     
-    self.gotoStep = function(newStep) {
-      self.currentStep = newStep;
+    self.gotoStep = function(currentStep, form) {
+      if(!self.check(currentStep, form)) {
+          var newStep = +currentStep + 1;
+          self.currentStep = newStep;
+        }
     }
     
     self.getStepTemplate = function(){

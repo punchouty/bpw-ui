@@ -86,7 +86,7 @@ Bootstrap Wizard
       color: #999;
       display: inline-block; }
 
- .login .custom-content .form-control {
+/* .login .custom-content .form-control {
     background-color: #fff;
    border: 1px solid #c2cad8;
    color: #555;
@@ -99,4 +99,14 @@ Bootstrap Wizard
 }
 .login .dropdown-menu a  {
   color: #555 !important;
+}*/
+
+.login .custom-content #search {
+    background-color: #36c6d3;
+    border-color: #2bb8c4;
+    color: #fff;
+}
+
+.login .custom-content label {
+    color: #fff;
 }

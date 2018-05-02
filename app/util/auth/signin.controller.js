@@ -21,8 +21,8 @@
 
     function activate() {
       //TODO to be removed;
-      vm.mobile = __env.user;
-      vm.password = __env.password;
+      // vm.mobile = __env.user;
+      // vm.password = __env.password;
       vm.rememberMe = false;
       vm.validFromServer = true;
     }

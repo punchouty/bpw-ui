@@ -12,13 +12,13 @@
                                 </div>
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="active" role="presentation" >
-                                        <a href="" data-toggle="tab" data-target="#profile_info" role="tab" aria-controls="profile_info" aria-selected="true" data-toggle="tab" >Personal Info</a>
+                                        <a href="" data-toggle="tab" data-target="#profile_info" role="tab" aria-controls="profile_info" aria-selected="true" data-toggle="tab" tabindex="0">Personal Info</a>
                                     </li>                                   
                                     <li role="presentation">
-                                        <a href="" data-toggle="tab" data-target="#change_password" role="tab" aria-controls="change_password" aria-selected="true" data-toggle="tab">Change Password</a>
+                                        <a href="" data-toggle="tab" data-target="#change_password" role="tab" aria-controls="change_password" aria-selected="true" data-toggle="tab" tabindex="-1">Change Password</a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="" data-toggle="tab" data-target="#organizations" role="tab" aria-controls="organizations" aria-selected="true" data-toggle="tab">Organizations</a>
+                                        <a href="" data-toggle="tab" data-target="#organizations" role="tab" aria-controls="organizations" aria-selected="true" data-toggle="tab" tabindex="-1">Organizations</a>
                                     </li>
                                     
                                 </ul>
@@ -26,24 +26,24 @@
                             <div class="portlet-body">
                                 <div class="tab-content" aria-live="polite">
                                     <!-- PERSONAL INFO TAB -->
-                                    <div class="tab-pane active" id="profile_info" role="tabpanel" aria-labelledby="profile info" aria-hidden="false" >
+                                    <div class="tab-pane active" id="profile_info" role="tabpanel" aria-labelledby="profile info" aria-hidden="false" tabindex="0">
                                         <div class="row">
                                             <div class="col-md-6 col-md-offset-3">
                                                 
                                                 <form role="form" action="#">
                                                     <div class="form-group">
                                                         <label class="control-label">Name</label>
-                                                        <input type="text" placeholder="John Doe" class="form-control" /> </div>
+                                                        <input type="text" placeholder="User name" class="form-control" value="john doe"/> </div>
 
                                                     <div class="form-group">
                                                         <label class="control-label">Email</label>
-                                                        <input type="mail" placeholder="John@Doe.com" class="form-control" /> </div>                                                
+                                                        <input type="mail" placeholder="User Email" class="form-control" value="john@gmail.com"/> </div>                                                
                                                     <div class="form-group">
                                                         <label class="control-label">Mobile Number</label>
-                                                        <input type="text" placeholder="Mobile" class="form-control" disabled="" /> </div>
+                                                        <input type="text" placeholder="Mobile" class="form-control" disabled="" value="9212121212"/> </div>
                                                     <div class="form-group">
                                                         <label class="control-label">Address</label>
-                                                        <textarea placeholder="Address" rows="5" class="form-control" ></textarea> </div>
+                                                        <textarea placeholder="Address" rows="5" class="form-control" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea> </div>
                                                     <div class="margiv-top-10">
                                                         <a href="javascript:;" class="btn green" ui-sref="app.dashboard"> Save Changes </a>
                                                         <a href="javascript:;" class="btn default"> Cancel </a>
@@ -56,7 +56,7 @@
                                     </div>
                                     <!-- END PERSONAL INFO TAB -->                                 
                                     <!-- CHANGE PASSWORD TAB -->
-                                    <div class="tab-pane" id="change_password">
+                                    <div class="tab-pane" id="change_password" role="tabpanel" aria-labelledby="change password" aria-hidden="true" tabindex="0">
                                         <div class="row">
                                             <div class="col-md-6 col-md-offset-3">
                                                 
@@ -82,7 +82,7 @@
                                         
                                     </div>
                                     <!-- END CHANGE PASSWORD TAB -->       
-                                    <div class="tab-pane" id="organizations" role="tabpanel" aria-labelledby="organizations" aria-hidden="true">
+                                    <div class="tab-pane" id="organizations" role="tabpanel" aria-labelledby="organizations" aria-hidden="true" tabindex="0">
                                         <div ng-include="'app/profile/organization/list.html'" ng-controller="prfOrganizationsListCtrl as vm"></div>
                                     </div>                            
                                 </div>

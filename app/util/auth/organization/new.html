@@ -8,9 +8,11 @@
         <div class="content custom-content">
             
                     <!-- BEGIN: ACCORDION DEMO -->
-                    <div class="portlet light bordered">
+                    <!-- <div class="portlet light bordered">
                         
-                        <div class="portlet-body form"> 
+                        <div class="portlet-body form">  -->
+                            
+
                             <div class="row" >
                                 <div class="col-md-12">
                         
@@ -18,26 +20,23 @@
                                 <form class="form-horizontal" role="form" name="vm.organizationForm" ng-submit="vm.onSubmit(vm.organizationForm)" style="padding: 14px;">
                                     <div class="form-body">
                                        <div class="form-group" ng-class="{'has-error':vm.organizationForm.name.$dirty && vm.organizationForm.name.$invalid}">
-                                            <label>Organization Name</label>
+                                            <!-- <label>Organization Name</label> -->
                                             
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-home"></i>
-                                                    </span>
+                                                <div class="">                                                    
                                                     <input type="text" class="form-control" name="name" placeholder="Organization Name" ng-model="vm.organization.name" required="" aria-describedby="organization name"  > 
                                                 </div>
                                             
                                         </div>
 
                                          <div class="form-group" ng-class="{'has-error':vm.organizationForm.mobile.$dirty && vm.organizationForm.mobile.$invalid}">
-                                            <label>Mobile</label>
+                                            <!-- <label>Mobile</label> -->
                                             <div class="">
                                                 <div class="input-group">
                                                     <div class="input-icon">
                                                         <i class="fa fa-search"></i>
                                                         <input id="mobile" class="form-control" type="text" name="mobile" placeholder="Mobile" ng-model="vm.organization.mobile" ng-pattern="/^[789]\d{9}$/" maxlength="10" required aria-describedby="Mobile" > </div>
                                                     <span class="input-group-btn">
-                                                        <button id="search" class="btn btn-success" type="button" ng-click="vm.search(vm.organization.mobile)" role="button" aria-label="search with mobile">
+                                                        <button id="search" class="btn btn-info" type="button" ng-click="vm.search(vm.organization.mobile)" role="button" aria-label="search with mobile">
                                                             <i class="fa fa-arrow-left fa-fw"></i> Search</button>
                                                     </span>
                                                 </div>
@@ -47,12 +46,9 @@
 
                                         
                                         <div class="form-group" ng-class="{'has-error':vm.organizationForm.contact.$dirty && vm.organizationForm.contact.$invalid}">
-                                            <label>Contact Name</label>
+                                            <!-- <label>Contact Name</label> -->
                                             
-                                                <div class="input-group">
-                                                	 <span class="input-group-addon">
-                                                        <i class="fa fa-user"></i>
-                                                    </span>
+                                                <div class="">                                                	
                                                     <input type="text" name="contact" class="form-control" placeholder="Contact Name" ng-model="vm.organization.contact" required="" aria-describedby="contact name"  >
                                                    
                                                 </div>
@@ -62,12 +58,9 @@
                                         
 
                                         <div class="form-group" ng-class="{'has-error':vm.organizationForm.email.$dirty && vm.organizationForm.email.$invalid}">
-                                            <label>Email Address</label>
+                                            <!-- <label>Email Address</label> -->
                                             
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-envelope"></i>
-                                                    </span>
+                                                <div class="">                                                   
                                                     <input type="email" class="form-control" name="email" placeholder="Email Address" ng-model="vm.organization.email" required aria-describedby="email" > </div>
                                             
                                         </div>                                    
@@ -75,7 +68,7 @@
                                    
 
                                           <div class="form-group" ng-class="{'has-error':vm.organizationForm.quota.$dirty && vm.organizationForm.quota.$invalid}">
-                                                <label>Quota Request</label>
+                                                <!-- <label>Quota Request</label> -->
                                                 <div class="">
                                                     <select class="form-control" name="quota" placeholder="Quota" ng-model="vm.organization.quota" aria-describedby="quota request" ng-options="quota for quota in vm.quotas">
                                                         <option value="">Select</option>                                                       
@@ -105,8 +98,8 @@
                             <div class="clearfix"></div>
 
 
-                    	</div>
-                    </div>
+                    	<!-- </div>
+                    </div> -->
                 
             <!-- END MAIN CONTENT -->
 

@@ -31,12 +31,12 @@
 
                             <div class="col-md-4">
 
-                              <div class="btn btn-sm green btn-flat ft-modal-upload-btn-select-files" 
+                              <button class="btn btn-sm green btn-flat ft-modal-upload-btn-select-files" 
                                  ngf-select ng-model="vm.files" role="button" aria-label="click to upload pdf files" accept="application/pdf"  ngf-accept="'application/pdf'" ngf-pattern="'application/pdf'"
                                  ngf-multiple="true" ngf-fix-orientation="false"
                                  ngf-keep="'distinct'" ngf-max-size="25MB">
                                    <i class="fa fa-plus"></i>   Upload File 
-                              </div>
+                              </button>
                              <div class="help-block">Suggested Image Scan Quality 300 dp</div>
                               <hr>                              
 
@@ -60,7 +60,7 @@
                                       <td><strong>{{ file.name }}</strong></td>
                                       <td>{{ file.size / 1000000|number: 1 }} MB</td>
                                       <td> <img width="100" height="100" ngf-thumbnail="file"></td>
-                                      <td><a class="btn btn-danger btn-xs ft-modal-upload-delete-file" ng-click="vm.deleteFile(vm.files, file)" role="button" aria-label="delete file"><i class="fa fa-trash"></i> Delete</a></td>
+                                      <td><button class="btn btn-danger btn-xs ft-modal-upload-delete-file" ng-click="vm.deleteFile(vm.files, file)" role="button" aria-labelledby="delete selected file"><i class="fa fa-trash"></i> Delete</button></td>
 
                                     </tr>    
                                   </tbody>
@@ -84,7 +84,7 @@
                               </div> -->   
 
                               <div>
-                                <button type="submit" class="btn btn-success btn-sm btn-s pull-right"  ng-click="vm.uploadFiles($files)"  ng-disabled="!vm.files" role="button" aria-label="upload files">
+                                <button type="submit" class="btn btn-success btn-sm btn-s pull-right"  ng-click="vm.uploadFiles($files)"  ng-disabled="!vm.files" role="button" aria-labelledby="upload files">
                                     <span class="glyphicon glyphicon-upload"></span> Upload
                                 </button>
                               </div>  

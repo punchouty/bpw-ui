@@ -3,11 +3,11 @@
         <!-- END HEADER -->
         <div class="clearfix"> </div>
         <!-- BEGIN CONTAINER -->
-        <main class="page-container" role="main">
+        <div class="page-container">
             <!-- BEGIN SIDEBAR -->
             <aside role="complementary" data-ng-include="'app/layout/templates/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </aside>
             <!-- END SIDEBAR -->
-            <section class="page-content-wrapper"  role="region">
+            <main class="page-content-wrapper"  role="main">
                 <div class="page-content">
                     <!-- BEGIN PAGE HEAD -->
                     <div data-ng-include="'app/layout/templates/page-head.html'" data-ng-controller="PageHeadController" class="page-head" aria-label="page head"> </div>
@@ -16,14 +16,14 @@
                     <div ui-view class="fade-in-up"> </div>
                     <!-- END ACTUAL CONTENT -->
                 </div>
-            </section>
+            </main>
             <!-- BEGIN QUICK SIDEBAR -->
             <!-- <a href="javascript:;" class="page-quick-sidebar-toggler">
                 <i class="icon-login"></i>
             </a>
              -->
             <!-- END QUICK SIDEBAR -->
-        </main>
+        </div>
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <footer role="contentinfo" data-ng-include="'app/layout/templates/footer.html'" data-ng-controller="FooterController" class="page-footer"> </footer>

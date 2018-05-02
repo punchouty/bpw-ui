@@ -29,20 +29,20 @@
                     <div id="myTab">
                       <ul class="nav nav-tabs" role="tablist">
                         <li class="tab active" role="presentation">
-                          <a id="tab1" href="" data-target="#sub_projects" role="tab" aria-controls="sub_projects" aria-selected="true" data-toggle="tab" >Current</a>
+                          <a id="tab1" href="" data-target="#sub_projects" role="tab" aria-controls="sub_projects" aria-selected="true" data-toggle="tab" tabindex="0">Current</a>
                         </li>
                         <li class="tab" role="presentation">
-                          <a id="tab2" href="" data-target="#history" role="tab" aria-controls="history" aria-selected="false" data-toggle="tab" >History</a>
+                          <a id="tab2" href="" data-target="#history" role="tab" aria-controls="history" aria-selected="false" data-toggle="tab" tabindex="-1">History</a>
                         </li>                        
                       </ul>
 
                       <div id="myTabContent" class="tab-content" aria-live="polite">
-                        <div class="tab-pane fade in active" id="sub_projects" role="tabpanel" aria-labelledby="tab1" aria-hidden="false" >                          
+                        <div class="tab-pane fade in active" id="sub_projects" role="tabpanel" aria-labelledby="tab1" aria-hidden="false" tabindex="0">                          
                            <div ng-include="'app/src/dashboard/subList.html'"></div>
                         </div>
 
 
-                        <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" >
+                        <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" tabindex="0">
                           <div ng-include="'app/src/dashboard/history/list.html'" ng-controller="historyProjectsListCtrl as vm"></div>
                         </div>                       
                       </div>
