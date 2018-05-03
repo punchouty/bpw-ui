@@ -31,8 +31,8 @@
                 </div>
             </div>
             <div class="portlet-body"> 
-            	<div class="table-responsive">
-            		<table
+            	<div class="">
+            		<table id="projectTable"
 						class="table table-striped table-bordered table-hover">
 						<thead>
 							<tr>
@@ -42,7 +42,7 @@
 								<th>Date Created</th>
 								<th>Created By</th>
 								<th>Status</th>
-								<th>Actions</th>
+								<th width="30%">Actions</th>
 
 
 							</tr>
@@ -104,6 +104,13 @@
 <!-- BEGIN MAIN JS-->
 <script>
     // call any jquery or angularjs code ehre
+    $(document).ready( function () {
+	    $('#projectTable').DataTable({
+            language: {
+                searchPlaceholder: "Search records"
+            }
+        });
+	} );
 </script>
 <!-- BEGIN MAIN JS -->
 

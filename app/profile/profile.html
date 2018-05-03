@@ -45,8 +45,8 @@
                                                         <label class="control-label">Address</label>
                                                         <textarea placeholder="Address" rows="5" class="form-control" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea> </div>
                                                     <div class="margiv-top-10">
-                                                        <a href="javascript:;" class="btn green" ui-sref="app.dashboard"> Save Changes </a>
-                                                        <a href="javascript:;" class="btn default"> Cancel </a>
+                                                        <button class="btn green" ng-click="$state.go('app.dashboard')" aria-label="Save Changes"> Save Changes </button>
+                                                        <button class="btn default" aria-label="Cancel"> Cancel </button>
                                                     </div>
                                                 </form>
 
@@ -63,16 +63,16 @@
                                                 <form action="#">
                                                     <div class="form-group">
                                                         <label class="control-label">Current Password</label>
-                                                        <input type="password" class="form-control" /> </div>
+                                                        <input type="password" class="form-control" placeholder="current password"/> </div>
                                                     <div class="form-group">
                                                         <label class="control-label">New Password</label>
-                                                        <input type="password" class="form-control" /> </div>
+                                                        <input type="password" class="form-control" placeholder="new password"/> </div>
                                                     <div class="form-group">
                                                         <label class="control-label">Re-type New Password</label>
-                                                        <input type="password" class="form-control" /> </div>
+                                                        <input type="password" class="form-control" placeholder="retype new password"/> </div>
                                                     <div class="margin-top-10">
-                                                        <a href="javascript:;" class="btn green"> Change Password </a>
-                                                        <a href="javascript:;" class="btn default"> Cancel </a>
+                                                        <button  class="btn green" aria-label="Change Password"> Change Password </button>
+                                                        <button  class="btn default" aria-label="Cancel"> Cancel </button>
                                                     </div>
                                                 </form>
 

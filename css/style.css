@@ -110,3 +110,15 @@ Bootstrap Wizard
 .login .custom-content label {
     color: #fff;
 }
+
+.dataTables_scrollBody
+{
+ overflow-x:hidden !important;
+ overflow-y:auto !important;
+}
+
+table
+{
+ overflow-x:hidden !important;
+ overflow-y:auto !important;
+}
